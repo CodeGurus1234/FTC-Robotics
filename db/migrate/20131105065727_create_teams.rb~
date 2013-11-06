@@ -1,11 +1,11 @@
 class CreateTeams < ActiveRecord::Migration
   def up
     create_table :teams do |t|
-	t.integer :team
-	t.text :organization
-	t.text :city
-	t.text :state
-	t.datetime :date_Registered
+	t.integer :Team
+	t.text :Organization
+	t.text :City
+	t.text :State
+	t.datetime :Date_Registered
       t.timestamps
     end
   end

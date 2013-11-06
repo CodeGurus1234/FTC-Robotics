@@ -1,0 +1,21 @@
+-#  This file is app/views/teams/index.html.haml
+%h1 All Teams
+
+%table#teams
+  %thead
+    %tr
+      %th Team No
+      %th Organization
+      %th City
+      %th State
+      %th Date Registered
+  %tbody
+    - @teams.each do |team|
+      %tr
+        %td= team.Team 
+        %td= team.Organization
+        %td= team.City
+        %td= team.State
+        %td= team.Date_Registered
+        
+
