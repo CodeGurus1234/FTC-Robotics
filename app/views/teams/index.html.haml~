@@ -18,7 +18,4 @@
         %td= team.state
         %td= team.date_Registered
         
-= form_tag teams_path, multipart: true do
 
-  = file_field_tag :file
-  = submit_tag 'Upload CSV'
