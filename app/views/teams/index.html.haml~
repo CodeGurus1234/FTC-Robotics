@@ -9,6 +9,18 @@
       %th City
       %th State
       %th Date Registered
+      %th Main Contact
+      %th Main Contact Address
+      %th Main Contact City
+      %th Main Contact State
+      %th Main Contact Postal Code
+      %th Country
+      %th Main Contact Email
+      %th Main Contact Phone
+      %th County
+      %th Organization Type
+      %th School District
+
   %tbody
     - @teams.each do |team|
       %tr
@@ -17,6 +29,18 @@
         %td= team.city
         %td= team.state
         %td= team.date_registered
+        %td= team.main_contact
+        %td= team.main_contact_address
+        %td= team.main_contact_city
+        %td= team.main_contact_state
+        %td= team.main_contact_postal_code
+        %td= team.country
+        %td= team.main_contact_email
+        %td= team.main_contact_phone
+        %td= team.county
+        %td= team.organization_type
+        %td= team.school_district
+
 = form_tag import_teams_path, multipart: true do
 
   = file_field_tag :file
