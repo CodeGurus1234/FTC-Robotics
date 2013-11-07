@@ -1,5 +1,5 @@
 class CreateUsers < ActiveRecord::Migration
-<<<<<<< HEAD
+
   def up
       create_table :users do |t|
       t.string :user_id
