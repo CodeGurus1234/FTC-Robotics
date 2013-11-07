@@ -1,0 +1,11 @@
+-# in app/views/users/show.html.haml
+
+%h2 Details about Team#{@user_id}
+
+%ul#details
+  %li
+    Rating:
+    = @user.role
+  
+
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131105065727) do
+ActiveRecord::Schema.define(:version => 20131107013859) do
 
   create_table "teams", :force => true do |t|
     t.integer  "team"
@@ -29,8 +29,27 @@ ActiveRecord::Schema.define(:version => 20131105065727) do
     t.string   "main_contact_phone"
     t.string   "county"
     t.string   "school_district"
+    t.string   "organization_type"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+  end
+
+  create_table "users", :force => true do |t|
+<<<<<<< HEAD
+    t.string   "user_id"
+    t.string   "email"
+    t.string   "role"
+    t.string   "password"
+    t.string   "session_token"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+=======
+    t.string   "userid"
+    t.string   "password"
+    t.string   "role"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+>>>>>>> bed72099416015082dcab6887a9ea7b8cac4727b
   end
 
 end

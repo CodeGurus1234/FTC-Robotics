@@ -6,21 +6,25 @@ def new
 end
 
 def create
-	@team = Team.new(params[:team])
-	exist= Team.find_by_team(@team[:team] , :conditions => ["team = ?" , @team[:team]])
+	@user = User.new(params[:user])
+	exist= User.find_by_user_id(@user[:user_id] , :conditions => ["user_id = ?" , @user[:user_id]])
+        userrole= exist.role
+        puts userrole
 	if exist   
-	   session[:session_token] = exist.session_token
-           if @user[:role]=='Global_Admin'
+	   #session[:session_token] = exist.session_token
+           if exist.role == "Global_Admin"
             flash[:notice] = "Hi!! Becca You are on Global Admin Home Page"
 	    redirect_to teams_path
             end
-           if @user[:role]=='Team_Member'
-            flash[:notice] = "Hi!! #{@team.team} You are on your team's Home Page"
+           if exist.role == "Team_Member"
+            flash[:notice] = "Hi!! #{@user.user_id} You are on your team's Home Page"
+            redirect_to team_path(@user)
            end
 	else
-	   flash[:notice] = "Invalid team-number/password combination"
+	   flash[:notice] = "Login/password combination"
 	   redirect_to login_path	
         end
+   
 end
 
 def destroy

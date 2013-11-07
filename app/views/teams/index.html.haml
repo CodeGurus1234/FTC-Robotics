@@ -40,7 +40,7 @@
         %td= team.county
         %td= team.organization_type
         %td= team.school_district
-      
+
 = form_tag import_teams_path, multipart: true do
 
   = file_field_tag :file
