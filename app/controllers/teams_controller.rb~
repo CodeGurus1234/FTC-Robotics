@@ -34,8 +34,13 @@ end
        flash[:notice] = "Team data uploaded"
        redirect_to teams_path
   end
+<<<<<<< HEAD
 
+ 
+end
+=======
+>>>>>>> 810a0551fcf47fcf4f893ea3d44701260f410091
 
-
+end
 
 end
