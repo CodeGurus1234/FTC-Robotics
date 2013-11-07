@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :session_token
       # Add fields that let Rails automatically keep track
       # of when users are added or modified:
+  end
 end
   def down
       drop_table :users
