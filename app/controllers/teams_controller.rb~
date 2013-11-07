@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
 <<<<<<< HEAD
  def import  
   if(params[:file] == nil)
-	flash[:notice] =" No file selected"
+	flash[:notice] ="Sorry! No file selected. Please select a file and try again."
 	redirect_to teams_path
   else
        Team.upload(params[:file].path)  

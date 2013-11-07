@@ -9,7 +9,6 @@
       %th City
       %th State
       %th Date Registered
-<<<<<<< HEAD
       %th Main Contact
       %th Main Contact Address
       %th Main Contact City
@@ -21,8 +20,7 @@
       %th County
       %th Organization Type
       %th School District
-=======
->>>>>>> db1e8b88fb86e72bd7bc6d3738d58a4c5f49aca8
+
   %tbody
     - @teams.each do |team|
       %tr
@@ -30,7 +28,6 @@
         %td= team.organization
         %td= team.city
         %td= team.state
-<<<<<<< HEAD
         %td= team.date_registered
         %td= team.main_contact
         %td= team.main_contact_address
@@ -43,10 +40,7 @@
         %td= team.county
         %td= team.organization_type
         %td= team.school_district
-=======
-        %td= team.date_registered.strftime('%m/%d/%Y')
->>>>>>> db1e8b88fb86e72bd7bc6d3738d58a4c5f49aca8
-        
+      
 = form_tag import_teams_path, multipart: true do
 
   = file_field_tag :file
