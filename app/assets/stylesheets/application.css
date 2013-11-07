@@ -41,24 +41,24 @@ h1 {
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
-  background-color: black;
+  background-color: navy;
   color: white;
   border-bottom: 4px solid #8698e4;
   font-size: 2em;
   font-style: normal;
 }
-table#movies {
+table#teams {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#movies th {
+table#teams th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-table#movies th, table#movies td {
+table#teams th, table#teams td {
   padding: 4px;
   text-align: left;
 }
