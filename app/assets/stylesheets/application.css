@@ -31,7 +31,7 @@ a {
   font-weight: bold;
 }
 h1 {
-  color: maroon;
+  color: #8698e4;
   font-size: 150%;
   font-style: italic;
   display: block;
@@ -41,9 +41,9 @@ h1 {
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
-  background-color: orange;
+  background-color: navy;
   color: white;
-  border-bottom: 4px solid gold;
+  border-bottom: 4px solid #8698e4;
   font-size: 2em;
   font-style: normal;
 }
@@ -71,5 +71,5 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: maroon;
+  color: navy;
 }

@@ -15,8 +15,8 @@ class CreateTeams < ActiveRecord::Migration
 	t.string :main_contact_email
 	t.string :main_contact_phone
 	t.string :county
-	t.string :organization_type
 	t.string :school_district
+        t.string :organization_type
       t.timestamps
     end
   end

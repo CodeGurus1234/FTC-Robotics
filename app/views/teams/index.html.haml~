@@ -9,6 +9,7 @@
       %th City
       %th State
       %th Date Registered
+<<<<<<< HEAD
       %th Main Contact
       %th Main Contact Address
       %th Main Contact City
@@ -20,6 +21,8 @@
       %th County
       %th Organization Type
       %th School District
+=======
+>>>>>>> db1e8b88fb86e72bd7bc6d3738d58a4c5f49aca8
   %tbody
     - @teams.each do |team|
       %tr
@@ -28,19 +31,22 @@
         %td= team.city
         %td= team.state
         %td= team.date_registered
-        %th Main Contact
-        %th :main_contact_address
-        %th :main_contact_city
-        %th :main_contact_state
-        %th :main_contact_postal_code
-        %th :country
-        %th :main_contact_email
-        %th :main_contact_phone
-        %th :county
-        %th :organization_type
-        %th :school_district
+<<<<<<< HEAD
+        %td= team.main_contact
+        %td= team.main_contact_address
+        %td= team.main_contact_city
+        %td= team.main_contact_state
+        %td= team.main_contact_postal_code
+        %td= team.country
+        %td= team.main_contact_email
+        %td= team.main_contact_phone
+        %td= team.county
+        %td= team.organization_type
+        %td= team.school_district
+=======
+>>>>>>> db1e8b88fb86e72bd7bc6d3738d58a4c5f49aca8
         
-= form_tag upload_teams_path, multipart: true do
+= form_tag import_teams_path, multipart: true do
 
   = file_field_tag :file
   = submit_tag 'Upload CSV'

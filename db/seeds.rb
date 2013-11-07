@@ -6,10 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-teams = [{:team => '111', :organization => 'NYU', :city => 'New York', :state => 'NY', :date_registered => '5-Nov-2013'},
-{:team => '222', :organization => 'StClara', :city => 'California', :state => 'California', :date_registered => "9/13/2013"}
-]
+teams = [{:team => '123', :organization => 'UIowa', :city => 'Iowa', :state => 'Iowa', :date_Registered => '5-Nov-2013'}]
 
 teams.each do |t|
-Team.create!(t)
+Team.create!({:team => '123', :organization => 'UIowa', :city => 'Iowa', :state => 'Iowa', :date_Registered => '5-Nov-2013'})
 end

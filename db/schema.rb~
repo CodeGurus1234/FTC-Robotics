@@ -16,11 +16,21 @@ ActiveRecord::Schema.define(:version => 20131105065727) do
   create_table "teams", :force => true do |t|
     t.integer  "team"
     t.text     "organization"
-    t.text     "city"
-    t.text     "state"
-    t.datetime "date_Registered"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string   "city"
+    t.string   "state"
+    t.datetime "date_registered"
+    t.string   "main_contact"
+    t.string   "main_contact_address"
+    t.string   "main_contact_city"
+    t.string   "main_contact_state"
+    t.string   "main_contact_postal_code"
+    t.string   "country"
+    t.string   "main_contact_email"
+    t.string   "main_contact_phone"
+    t.string   "county"
+    t.string   "school_district"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
 end
