@@ -3,7 +3,7 @@ class Team < ActiveRecord::Base
   def self.upload(file)
     data = SmarterCSV.process(file)    
     data.each do |team|	
-	team[:date_registered]= DateTime.strptime(team[:date_registered], "%m/%d/%Y")
+	team[:date_registered]= Date.strptime("%m/%d/%Y", team[:date_registered])
 	Team.create!(team)
     end
   end
