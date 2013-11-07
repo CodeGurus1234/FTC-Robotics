@@ -8,6 +8,9 @@ class TeamsController < ApplicationController
   def new
     # default: render 'new' template
   end
+ def show
+ # default: render 'show' template
+end
 
  def create
    @team = Team.create_team!(params[:team])
