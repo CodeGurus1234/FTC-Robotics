@@ -24,7 +24,7 @@ end
    end
  end
 
-<<<<<<< HEAD
+
  def import  
   if(params[:file] == nil)
 	flash[:notice] ="Sorry! No file selected. Please select a file and try again."
@@ -34,16 +34,7 @@ end
        flash[:notice] = "Team data uploaded"
        redirect_to teams_path
   end
-=======
- def import
-  #Team.import(params[:file])
-  data = SmarterCSV.process(params[:file].path) 
-  data.each do |row|
-  Team.create!(row)
- end
-  redirect_to teams_path, notice: "CSV imported."
->>>>>>> db1e8b88fb86e72bd7bc6d3738d58a4c5f49aca8
-end
 
+end
 
 end
