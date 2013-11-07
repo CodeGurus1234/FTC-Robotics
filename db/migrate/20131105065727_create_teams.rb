@@ -3,9 +3,20 @@ class CreateTeams < ActiveRecord::Migration
     create_table :teams do |t|
 	t.integer :team
 	t.text :organization
-	t.text :city
-	t.text :state
-	t.datetime :date_Registered
+	t.string :city
+	t.string :state
+	t.datetime :date_registered
+	t.string :main_contact
+	t.string :main_contact_address
+	t.string :main_contact_city
+	t.string :main_contact_state
+	t.string :main_contact_postal_code
+	t.string :country
+	t.string :main_contact_email
+	t.string :main_contact_phone
+	t.string :county
+	t.string :school_district
+        t.string :organization_type
       t.timestamps
     end
   end

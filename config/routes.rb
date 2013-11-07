@@ -12,7 +12,14 @@ FTCLeagues::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-resources :teams
+
+resources :teams do
+    collection { post :import }
+  end
+  root to: 'teams#index'
+  match '/login', to: 'sessions#new', via: :get
+  match '/login_create', to: 'sessions#create', via: :post
+  match '/logout', to: 'sessions#destroy', via: :delete
   # Sample resource route with options:
   #   resources :products do
   #     member do

@@ -31,7 +31,7 @@ a {
   font-weight: bold;
 }
 h1 {
-  color: maroon;
+  color: #8698e4;
   font-size: 150%;
   font-style: italic;
   display: block;
@@ -41,24 +41,24 @@ h1 {
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
-  background-color: orange;
+  background-color: black;
   color: white;
-  border-bottom: 4px solid gold;
+  border-bottom: 4px solid #8698e4;
   font-size: 2em;
   font-style: normal;
 }
-table#teams {
+table#movies {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#teams th {
+table#movies th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-table#teams th, table#teams td {
+table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
 }
@@ -71,5 +71,5 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: maroon;
+  color: navy;
 }
