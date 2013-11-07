@@ -41,7 +41,7 @@ h1 {
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
-  background-color: black;
+  background-color: navy;
   color: white;
   border-bottom: 4px solid #8698e4;
   font-size: 2em;
