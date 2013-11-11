@@ -6,7 +6,7 @@ Given /^I am on the login page$/ do
 
 When /^I click "([^"]*)"$/ do |link|
   
-  click_link (link)
+  click_link(link)
 end
 
 Then /^I should see the Team Number field$/ do
