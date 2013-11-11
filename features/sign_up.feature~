@@ -6,4 +6,4 @@ Scenario:
 
   When I click "Sign-up as a new team"
 
-  Then I should see Team Number field
+ Then I should see the Team Number field
