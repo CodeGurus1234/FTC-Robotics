@@ -1,0 +1,14 @@
+
+Given /^I am on the login page$/ do
+  visit login_path
+  save_and_open_page
+ end
+
+When /^I click "([^"]*)"$/ do |link|
+  
+  click_link (link)
+end
+
+Then /^I should see the Team Number field$/ do
+  find_field('Team Number')
+end
