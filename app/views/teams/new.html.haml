@@ -41,7 +41,16 @@
  = label :team, :email, 'Coach Email'
  = text_field :team, 'main_contact_email'
 
- = label :team, :email, 'Coach Phone number'
- = text_field :team, 'main_contact_phone/ext.'
+ = label :team, :organization_type, 'Public School'
+ = radio_button :team, 'organization_type', 'Public School'
+
+ = label :team, :organization_type, 'Private School'
+ = radio_button :team, 'organization_type', 'Private School'
+
+ = label :team, :organization_type, 'Scout Troop'
+ = radio_button :team, 'organization_type', 'Scout Troop'
+ 
+ = label :team, :organization_type, 'Other'
+ = radio_button :team, 'organization_type', 'Other'
 
  = submit_tag 'Create Team'
