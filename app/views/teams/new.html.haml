@@ -35,11 +35,11 @@
  = label :team, :coach_mail, 'Coach city'
  = text_field :team, 'main_contact_city'
 
- = label :team, :coach_phone, 'Coach state'
- = text_field :user, 'main_contact_state'
+ = label :team, :main_contact_state, 'Coach state'
+ = text_field :team, 'main_contact_state'
 
- = label :team, :coach_phone, 'Coach zipcode'
- = text_field :user, 'main_contact_postal_code'
+ = label :team, :main_contact_postal_code, 'Coach zipcode'
+ = text_field :team, 'main_contact_postal_code'
 
  = label :team, :email, 'Coach Email'
  = text_field :team, 'main_contact_email'
@@ -61,5 +61,7 @@
  
  = label :team, :organization_type, 'Other'
  = radio_button :team, 'organization_type', 'Other'
+
+ -#= text_field :team, 'organization_type'
 
  = submit_tag 'Create Team'
