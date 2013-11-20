@@ -6,14 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-teams = [{:team => '456', :organization => 'UIowa', :city => 'Iowa', :state => 'Iowa', :date_registered => '5-Nov-2013'}]
+#teams = [{:team => '456', :organization => 'UIowa', :city => 'Iowa', :state => 'Iowa', :date_registered => '5-Nov-2013'}]
 
-teams.each do |t|
+#teams.each do |t|
 #Team.create!(t)
-end
+#end
 
-users =[{:user_id => 'Becca', :role => 'Global_Admin', :password => 'becca'},
-	 {:user_id => '1234', :role => 'Team_Member', :password => '1234'}
+session_token=SecureRandom.base64
+users =[{:user_id => 'Becca', :email => 'becca@gmail.com', :role => 'Global_Admin', :password => 'becca', :session_token => session_token}
+	# {:user_id => '1234', :email => '1234@gmail.com', :role => 'Team_Member', :password => '1234', :session_token => 'session_token'}
 	]
 users.each do |user|
    User.create!(user)

@@ -12,7 +12,7 @@ FTCLeagues::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+resources :users
 resources :teams do
     collection { post :import }
   end
