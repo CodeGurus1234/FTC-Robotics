@@ -1,25 +1,8 @@
 class TeamsController < ApplicationController
 
  def index
-  @teams= Team.all
-  #@leag = Team.near("Times Square,NY",50, order)
-   #Geocoder::Calculations.compass_point(@leag.first.bearing)
-#@leag = Geocoder.search('Times Square,NY')
-  #@arr = convert_to_hash(@leag)
-  #flash[:notice]= "Hiee..#{@arr}"
+  @teams= Team.all  
  end
-
-def convert_to_hash(tmdb_res)
-   hash_arr = Array.new()
-tmdb_res.each do |movie|
-     hash = Hash.new()
-     movie.instance_variables.each do |x| 
-        hash[x.to_s.delete("@").to_sym]= movie.instance_variable_get("#{x}")
-     end
-     hash_arr.push(hash)
-   end
-return hash_arr 
-end
 
   def new
     # default: render 'new' template
@@ -30,6 +13,7 @@ end
 
  def create
    @team = Team.create_team!(params[:team])
+   @user = Team.create_user!(params[:team])
    if @team.save
 	flash[:notice] = "Welcome #{@team.team}. Your account has been created"
 	redirect_to login_path	

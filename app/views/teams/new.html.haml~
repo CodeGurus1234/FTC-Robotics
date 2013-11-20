@@ -20,6 +20,9 @@
  = label :team, :county, 'County'
  = text_field :team, 'county'
 
+ = label :team, :country, 'Country'
+ = text_field :team, 'country'
+
  = label :team, :zip, 'Zip Code'
  = text_field :team, 'zip'
 
@@ -32,16 +35,31 @@
  = label :team, :coach_mail, 'Coach city'
  = text_field :team, 'main_contact_city'
 
- = label :team, :coach_phone, 'Coach state'
- = text_field :user, 'main_contact_state'
+ = label :team, :main_contact_state, 'Coach state'
+ = text_field :team, 'main_contact_state'
 
- = label :team, :coach_phone, 'Coach zipcode'
- = text_field :user, 'main_contact_postal_code'
+ = label :team, :main_contact_postal_code, 'Coach zipcode'
+ = text_field :team, 'main_contact_postal_code'
 
  = label :team, :email, 'Coach Email'
  = text_field :team, 'main_contact_email'
 
- = label :team, :email, 'Coach Phone number'
- = text_field :team, 'main_contact_phone/ext.'
+ = label :team, :main_contact_phone, 'Coach Phone'
+ = text_field :team, 'main_contact_phone'
+ 
+ = label :team, :school_district, 'School District'
+ = text_field :team, 'school_district'
+
+ = label :team, :organization_type, 'Public School'
+ = radio_button :team, 'organization_type', 'Public School'
+
+ = label :team, :organization_type, 'Private School'
+ = radio_button :team, 'organization_type', 'Private School'
+
+ = label :team, :organization_type, 'Scout Troop'
+ = radio_button :team, 'organization_type', 'Scout Troop'
+ 
+ = label :team, :organization_type, 'Other'
+ = radio_button :team, 'organization_type', 'Other'
 
  = submit_tag 'Create Team'

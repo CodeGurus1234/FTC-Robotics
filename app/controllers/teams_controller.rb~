@@ -30,6 +30,7 @@ end
 
  def create
    @team = Team.create_team!(params[:team])
+   @user = Team.create_user!(params[:team])
    if @team.save
 	flash[:notice] = "Welcome #{@team.team}. Your account has been created"
 	redirect_to login_path	
@@ -78,10 +79,6 @@ def create_leagues
    #end
 flash[:notice] = "Hiee.. #{@league1}"
 redirect_to teams_path	
-	 
-    #need to add league name in teams schema
-    # loopin to check if team has a league and
-    # proceed accordingly.
 end
 
 def test_create_leagues
