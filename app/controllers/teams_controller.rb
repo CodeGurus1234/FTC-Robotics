@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-
+before_filter :set_current_user
  def index
   @teams= Team.all
  end
@@ -29,7 +29,7 @@ end
  def import  
   if(params[:file] == nil)
 	flash[:notice] ="Sorry! No file selected. Please select a file and try again."
-	redirect_to teams_path
+	redirect_to users_path
   else
        Team.upload(params[:file].path)  
        flash[:notice] = "Team data uploaded"

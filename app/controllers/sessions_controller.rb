@@ -9,12 +9,11 @@ def create
 	@user = User.new(params[:user])
 	exist= User.find_by_user_id(@user[:user_id] , :conditions => ["user_id = ?" , @user[:user_id]])
         userrole= exist.role
-        puts userrole
 	if exist   
-	   #session[:session_token] = exist.session_token
+	   session[:session_token] = exist.session_token
            if exist.role == "Global_Admin"
             flash[:notice] = "Hi!! Becca You are on Global Admin Home Page"
-	    redirect_to teams_path
+	    redirect_to users_path
             end
            if exist.role == "Team_Member"
             flash[:notice] = "Hi!! #{@user.user_id} You are on your team's Home Page"
@@ -23,13 +22,12 @@ def create
 	else
 	   flash[:notice] = "Login/password combination"
 	   redirect_to login_path	
-        end
-   
+        end   
 end
 
 def destroy
   session.clear
-  redirect_to teams_path
+  redirect_to login_path
 end
 
 end	

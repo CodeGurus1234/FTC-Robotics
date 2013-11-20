@@ -41,4 +41,7 @@
         %td= team.organization_type
         %td= team.school_district
 
-= link_to 'Go Back to Admin Page', users_path
+= form_tag import_teams_path, multipart: true do
+
+  = file_field_tag :file
+  = submit_tag 'Upload CSV'

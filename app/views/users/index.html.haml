@@ -1,0 +1,9 @@
+-#  This file is app/views/users/index.html.haml
+
+
+= form_tag import_teams_path, multipart: true do
+
+  = file_field_tag :file
+  = submit_tag 'Upload CSV'
+
+
