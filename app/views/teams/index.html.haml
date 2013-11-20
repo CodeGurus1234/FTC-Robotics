@@ -20,6 +20,7 @@
       %th County
       %th Organization Type
       %th School District
+      %th League Name
 
   %tbody
     - @teams.each do |team|
@@ -40,8 +41,12 @@
         %td= team.county
         %td= team.organization_type
         %td= team.school_district
+        %td= team.league_name        
 
 = form_tag import_teams_path, multipart: true do
 
   = file_field_tag :file
   = submit_tag 'Upload CSV'
+
+=form_tag :action => 'create_leagues' do
+  = submit_tag 'Create Leagues'

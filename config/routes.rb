@@ -16,6 +16,7 @@ FTCLeagues::Application.routes.draw do
 resources :teams do
     collection { post :import }
   end
+  post 'teams/create_leagues'
   root to: 'teams#index'
   match '/login', to: 'sessions#new', via: :get
   match '/login_create', to: 'sessions#create', via: :post
