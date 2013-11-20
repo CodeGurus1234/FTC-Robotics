@@ -1,14 +1,17 @@
 class Team < ActiveRecord::Base  
 #require 'smarter_csv' 
+require 'geokit'
 validates :team, presence: true, :uniqueness => true
-
 
 def self.upload(file)
     data = SmarterCSV.process(file)    
-    data.each do |team|	    
+
+    data.each do |team|	
+	#team[:geocoded_address] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}")
 	Team.create_team!(team)
     end
   end
+
 
   def self.create_team!(team)
   if team[:date_registered].nil?

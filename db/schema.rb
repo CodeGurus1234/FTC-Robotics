@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20131107013859) do
     t.string   "county"
     t.string   "school_district"
     t.string   "organization_type"
+    t.string   "league_name"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
   end

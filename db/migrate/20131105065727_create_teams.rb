@@ -1,3 +1,4 @@
+require 'geokit-rails'
 class CreateTeams < ActiveRecord::Migration
   def up
     create_table :teams do |t|
@@ -17,6 +18,7 @@ class CreateTeams < ActiveRecord::Migration
 	t.string :county
 	t.string :school_district
         t.string :organization_type
+	t.string :league_name
       t.timestamps
     end
   end
