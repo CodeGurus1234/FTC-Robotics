@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20131121033543) do
     t.string "role"
     t.string "password"
     t.string "session_token"
-    t.string "updatedProfile"
   end
 
 end
