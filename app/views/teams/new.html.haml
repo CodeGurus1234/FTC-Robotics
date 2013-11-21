@@ -5,10 +5,10 @@
  = label :team, :team, 'Team Number'
  = text_field :team, 'team'
 
- = label :team, :organization, 'School/Organization'
- = text_field :team, 'organization'
+ = label :team, :main_contact_email, 'Coach Email'
+ = text_field :user, 'main_contact_email'
 
- = label :team, :sch_dist, 'School District'
+ = label :team, :school_district, 'School District'
  = text_field :team, 'school_district'
 
  = label :team, :city, 'City'
@@ -35,8 +35,8 @@
  = label :team, :coach_mail, 'Coach city'
  = text_field :team, 'main_contact_city'
 
- = label :team, :main_contact_state, 'Coach state'
- = text_field :team, 'main_contact_state'
+ = label :team, :"main_contact_state/main_contact_prov", 'Coach state'
+ = text_field :team, "main_contact_state/main_contact_prov"
 
  = label :team, :main_contact_postal_code, 'Coach zipcode'
  = text_field :team, 'main_contact_postal_code'
@@ -44,8 +44,8 @@
  = label :team, :email, 'Coach Email'
  = text_field :team, 'main_contact_email'
 
- = label :team, :main_contact_phone, 'Coach Phone'
- = text_field :team, 'main_contact_phone'
+ = label :team, :"main_contact_phone/ext.", 'Coach Phone'
+ = text_field :team, "main_contact_phone/ext."
  
  = label :team, :school_district, 'School District'
  = text_field :team, 'school_district'
@@ -65,6 +65,5 @@
  = label :team, :organization_type, 'Other'
  = radio_button :team, 'organization_type', 'Other'
 
- -#= text_field :team, 'organization_type'
-
  = submit_tag 'Create Team'
+
