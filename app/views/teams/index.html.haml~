@@ -43,14 +43,5 @@
         %td= team.school_district
         %td= team.league_name        
 
-<<<<<<< HEAD
-= form_tag import_teams_path, multipart: true do
-
-  = file_field_tag :file
-  = submit_tag 'Upload CSV'
-
-=form_tag :action => 'create_leagues' do
-  = submit_tag 'Create Leagues'
-=======
 = link_to 'Go Back to Admin Page', users_path
->>>>>>> 0dab659665e07195e942453de57d83962f023bf4
+

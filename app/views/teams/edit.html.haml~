@@ -1,12 +1,11 @@
-%h1 Sign-up
+-# edit.html.haml
 
-= form_tag teams_path do
- 
- = label :team, :team, 'Team Number'
- = text_field :team, 'team'
+%h1 Update Profile
 
- = label :team, :main_contact_email, 'Coach Email'
- = text_field :user, 'main_contact_email'
+= form_tag team_path(@team), :method => :put do
+
+ = label :team, :organization, 'School/Organization'
+ = text_field :team, 'organization'
 
  = label :team, :school_district, 'School District'
  = text_field :team, 'school_district'
@@ -41,9 +40,6 @@
  = label :team, :main_contact_postal_code, 'Coach zipcode'
  = text_field :team, 'main_contact_postal_code'
 
- = label :team, :email, 'Coach Email'
- = text_field :team, 'main_contact_email'
-
  = label :team, :"main_contact_phone/ext.", 'Coach Phone'
  = text_field :team, "main_contact_phone/ext."
  
@@ -58,12 +54,8 @@
 
  = label :team, :organization_type, 'Scout Troop'
  = radio_button :team, 'organization_type', 'Scout Troop'
-
- = label :team, :organizatoin_type, 'For Each'
- = radio_button :team, 'organization_type', 'For Each'
  
  = label :team, :organization_type, 'Other'
  = radio_button :team, 'organization_type', 'Other'
 
- = submit_tag 'Create Team'
-
+ = submit_tag 'Update Profile'

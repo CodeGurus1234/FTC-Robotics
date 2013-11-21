@@ -1,26 +1,18 @@
 class Team < ActiveRecord::Base  
 #require 'smarter_csv' 
-require 'geokit'
+#require 'geokit'
 validates :team, presence: true, :uniqueness => true
 
 def self.upload(file)
     data = SmarterCSV.process(file)    
-<<<<<<< HEAD
+
     data.each do |team|	
-	team[:date_registered]= DateTime.strptime(team[:date_registered], "%m/%d/%Y") 
 	#team[:geocoded_address] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}")
-=======
-    data.each do |team|	    
->>>>>>> 0dab659665e07195e942453de57d83962f023bf4
 	Team.create_team!(team)
     end
   end
 
-<<<<<<< HEAD
-  def self.create_team!(team)	
 
-	Team.create!({:team => team[:team], :organization => team[:organization], :city=>team[:city], :state=>team[:state], :date_registered=> team[:date_registered], :main_contact=>team[:main_contact], :main_contact_address=>team[:main_contact_address], :main_contact_city=>team[:main_contact_city], :"main_contact_state"=>team[:main_contact_state], :main_contact_postal_code=>team[:main_contact_postal_code], :country=>team[:country], :main_contact_email=>team[:main_contact_email], :main_contact_phone=>team[:main_contact_phone], :county=>team[:county], :organization_type=>team[:organization_type],:school_district=>team[:school_district]})
-=======
   def self.create_team!(team)
   if team[:date_registered].nil?
   dateRegistered = (Time.now).strftime('%m/%d/%Y')
@@ -28,7 +20,7 @@ def self.upload(file)
   dateRegistered = DateTime.strptime(team[:date_registered], "%m/%d/%Y")
   end	
 	Team.create!({:team => team[:team], :organization => team[:organization], :city=>team[:city], :state=>team[:state], :date_registered=> dateRegistered, :main_contact=>team[:main_contact], :main_contact_address=>team[:main_contact_address], :main_contact_city=>team[:main_contact_city], :"main_contact_state"=>team[:"main_contact_state/main_contact_prov"], :main_contact_postal_code=>team[:main_contact_postal_code], :country=>team[:country], :main_contact_email=>team[:main_contact_email], :main_contact_phone=>team[:"main_contact_phone/ext."], :county=>team[:county], :organization_type=>team[:organization_type],:school_district=>team[:school_district]})
->>>>>>> 0dab659665e07195e942453de57d83962f023bf4
+
 end
 
 def self.create_user!(team)
