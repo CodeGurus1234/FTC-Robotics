@@ -43,7 +43,7 @@ h1.title {
   padding: 10px;
   background-color: #002E99;
   color: #E6B300;
-  border-bottom: 4px solid #3DCC85;
+  border-bottom: 4px solid #E6B300;
   font-size: 2em;
   font-style: normal;
 }
