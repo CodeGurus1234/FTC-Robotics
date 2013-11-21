@@ -1,6 +1,6 @@
 class Team < ActiveRecord::Base  
 #require 'smarter_csv' 
-require 'geokit'
+#require 'geokit'
 validates :team, presence: true, :uniqueness => true
 
 def self.upload(file)

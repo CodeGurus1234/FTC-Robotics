@@ -6,8 +6,9 @@
 
   = file_field_tag :file
   = submit_tag 'Upload CSV'
-
-= form_tag :action => 'create_leagues' do
-  = submit_tag 'Create Leagues'
+%br
+= button_to 'Generate Leagues', teams_create_leagues_path
+%br
+= link_to 'Show Teams', teams_path
 
 

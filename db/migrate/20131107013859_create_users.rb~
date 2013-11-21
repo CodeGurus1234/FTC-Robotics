@@ -1,8 +1,4 @@
 class CreateUsers < ActiveRecord::Migration
-<<<<<<< HEAD
-=======
-
->>>>>>> e24a2c69f1945b5abf04ca7c6c8280078e36a2a2
   def up
       create_table :users do |t|
       t.string :user_id
@@ -10,13 +6,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :role
       t.string :password
       t.string :session_token
+      t.string :updated
       # Add fields that let Rails automatically keep track
       # of when users are added or modified:
-<<<<<<< HEAD
 end
-=======
-  end
->>>>>>> e24a2c69f1945b5abf04ca7c6c8280078e36a2a2
 end
   def down
       drop_table :users
