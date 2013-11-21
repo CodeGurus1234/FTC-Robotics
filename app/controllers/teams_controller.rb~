@@ -71,14 +71,20 @@ end
 	flash[:notice] ="Sorry! No file selected. Please select a file and try again."
 	redirect_to users_path
   else
-       team = Team.upload(params[:file].path)
-       if team.nil?
-        flash[:notice] = "Team data uploaded"
-        redirect_to teams_path
-       else
-        flash[:notice] = " Sorry -- #{team.errors.full_messages}.Try again"
-	redirect_to teams_path
+       teams = Team.upload(params[:file].path)     
+       teams.each do |team|
+	       if !(team.errors).empty?
+                @message = String.new ("Hi!!")
+		@message.concat("Sorry --#{team.team} was not added because of following erros #{team.errors.full_messages}.")
+	       end
        end
+        if @message.nil?
+        flash[:notice] = "Team data Uploaded"
+        redirect_to teams_path
+        else
+        flash[:notice] = "#{@message}.Please try again"
+	redirect_to teams_path      
+        end
   end
 end
 

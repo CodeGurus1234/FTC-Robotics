@@ -4,12 +4,11 @@ class Team < ActiveRecord::Base
 validates :team, presence: true, :uniqueness => true
 validates :team, :format => { :with => /\d{4}/, :message => "Only 4 digit numbers allowed"}
 validates :state, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
-validates :city, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
+validates :city, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }
 validates :county, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
 validates :country, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
 validates :main_contact, :format => { :with => /\A.*[a-zA-Z]+\z/, :message => "Only letters allowed" }
-validates :main_contact_city, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
-validates :main_contact_city, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
+validates :main_contact_city, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }
 validates :main_contact_postal_code, :format => { :with => /^\d{5}(-\d{4})?$/, :message => "Only 5 digit numbers like XXXXX or 9 digit numbers like xxxxx-xxxx allowed" }
 validates :main_contact_phone, :format => { :with => /^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}/, :message => "Only  digit numbers like XXXXXXXXXX or xxx-xxx-xxxx or (xxx)xxx-xxxx allowed" }
 validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message => "Only valid email address formats allowed" }
@@ -17,15 +16,13 @@ validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-
 
 def self.upload(file)
     data = SmarterCSV.process(file)    
-
+    @teams = Array.new()
     data.each do |team|	
 	#team[:geocoded_address] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}")
 	@team = Team.create_team!(team)
+        @teams.push(@team)
     end
-     #@team.save
-     return @team
-   
-    end
+     return @team   
   end
 
 
