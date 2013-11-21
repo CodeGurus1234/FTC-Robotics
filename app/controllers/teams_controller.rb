@@ -11,7 +11,7 @@ before_filter :set_current_user
   end
  def show
  # default: render 'show' template
-end
+ end
 
  def create
    @team = Team.create_team!(params[:team])

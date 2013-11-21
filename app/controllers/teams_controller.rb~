@@ -4,7 +4,7 @@ before_filter :set_current_user
   @teams= Team.all  
  end
  def edit
- # default: render 'new' template
+ # default: render 'edit' template
  end
   def new
     # default: render 'new' template

@@ -1,15 +1,70 @@
 %h1 Sign-up
 
-= form_tag users_path do
+= form_tag teams_path do
  
- = label :user, :user_id, 'Team Number'
- = text_field :user, 'user_id'
+ = label :team, :team, 'Team Number'
+ = text_field :team, 'team'
 
- = label :user, :email, 'Coach Email'
- = text_field :user, 'email'
+ = label :team, :organization, 'School/Organization'
+ = text_field :team, 'organization'
 
- = label :user, :password, 'Password'
- = text_field :user, 'password'
+ = label :team, :sch_dist, 'School District'
+ = text_field :team, 'school_district'
+
+ = label :team, :city, 'City'
+ = text_field :team, 'city'
+
+ = label :team, :state, 'State'
+ = text_field :team, 'state'
+
+ = label :team, :county, 'County'
+ = text_field :team, 'county'
+
+ = label :team, :country, 'Country'
+ = text_field :team, 'country'
+
+ = label :team, :zip, 'Zip Code'
+ = text_field :team, 'zip'
+
+ = label :team, :coach_first, 'Coach Name'
+ = text_field :team, 'main_contact'
+
+ = label :team, :coach_last, 'Coach address'
+ = text_field :team, 'main_contact_address'
+
+ = label :team, :coach_mail, 'Coach city'
+ = text_field :team, 'main_contact_city'
+
+ = label :team, :main_contact_state, 'Coach state'
+ = text_field :team, 'main_contact_state'
+
+ = label :team, :main_contact_postal_code, 'Coach zipcode'
+ = text_field :team, 'main_contact_postal_code'
+
+ = label :team, :email, 'Coach Email'
+ = text_field :team, 'main_contact_email'
+
+ = label :team, :main_contact_phone, 'Coach Phone'
+ = text_field :team, 'main_contact_phone'
+ 
+ = label :team, :school_district, 'School District'
+ = text_field :team, 'school_district'
+
+ = label :team, :organization_type, 'Public School'
+ = radio_button :team, 'organization_type', 'Public School'
+
+ = label :team, :organization_type, 'Private School'
+ = radio_button :team, 'organization_type', 'Private School'
+
+ = label :team, :organization_type, 'Scout Troop'
+ = radio_button :team, 'organization_type', 'Scout Troop'
+
+ = label :team, :organizatoin_type, 'For Each'
+ = radio_button :team, 'organization_type', 'For Each'
+ 
+ = label :team, :organization_type, 'Other'
+ = radio_button :team, 'organization_type', 'Other'
+
+ -#= text_field :team, 'organization_type'
 
  = submit_tag 'Create Team'
-
