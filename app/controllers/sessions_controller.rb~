@@ -16,13 +16,13 @@ def create
 	    redirect_to users_path
             end
             if exist.role == "Team_Member"  
-             if exist.updatedProfile == 'no'
-              flash[:notice] = "Hi!! #{@user.user_id} Please update your profile"
-              redirect_to edit_team_path(1234)
-             else
+             #if exist.updatedProfile == 'no'
+              #flash[:notice] = "Hi!! #{@user.user_id} Please update your profile"
+              #redirect_to edit_team_path(1234)
+             #else
               flash[:notice] = "Hi!! #{@user.user_id} You are on your team's Home Page"
               redirect_to team_path(@user.user_id)
-             end
+             #end
            end
 	else
 	  flash[:notice] = "Login/password combination"
