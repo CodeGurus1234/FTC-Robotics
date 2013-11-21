@@ -2,6 +2,7 @@ class Team < ActiveRecord::Base
 #require 'smarter_csv' 
 #require 'geokit'
 validates :team, presence: true, :uniqueness => true
+validates :team, :format => { :with => /\d{4}/, :message => "Only 4 digit numbers allowed"}
 validates :state, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
 validates :city, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
 validates :county, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
@@ -11,6 +12,7 @@ validates :main_contact_city, :format => { :with => /\A[a-zA-Z]+\z/, :message =>
 validates :main_contact_city, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
 validates :main_contact_postal_code, :format => { :with => /^\d{5}(-\d{4})?$/, :message => "Only 5 digit numbers like XXXXX or 9 digit numbers like xxxxx-xxxx allowed" }
 validates :main_contact_phone, :format => { :with => /^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}/, :message => "Only  digit numbers like XXXXXXXXXX or xxx-xxx-xxxx or (xxx)xxx-xxxx allowed" }
+validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message => "Only valid email address formats allowed" }
 
 
 def self.upload(file)
