@@ -44,7 +44,6 @@ def create_leagues
          team.save!
 	 @centre = Geokit::Geocoders::GoogleGeocoder3.geocode(team[:main_contact_postal_code])
 	 @teams_all.each do |teamtest| 
-	   
 		    if teamtest[:league_name] == nil && teamtest[:main_contact_postal_code] !=nil && !@league.include?(teamtest[:team])
 			      @test_if_in_radius = Geokit::Geocoders::GoogleGeocoder3.geocode("#{teamtest[:main_contact_postal_code]}")
 			      distance = @centre.distance_to(@test_if_in_radius)
@@ -63,7 +62,7 @@ def create_leagues
           end #inner each ends
         end	
     end #outer do ends
-puts @leagues
+#puts @leagues
 redirect_to teams_path	
 end
 
@@ -72,9 +71,14 @@ end
 	flash[:notice] ="Sorry! No file selected. Please select a file and try again."
 	redirect_to users_path
   else
-       Team.upload(params[:file].path)  
-       flash[:notice] = "Team data uploaded"
-       redirect_to teams_path
+       team = Team.upload(params[:file].path)
+       if team.nil?
+        flash[:notice] = "Team data uploaded"
+        redirect_to teams_path
+       else
+        flash[:notice] = " Sorry -- #{team.errors.full_messages}.Try again"
+	redirect_to teams_path
+       end
   end
 end
 
