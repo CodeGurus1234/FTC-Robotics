@@ -3,7 +3,7 @@ class League < ActiveRecord::Base
 
 def self.create_league!(league,leagueName)
 #leagues.each do |team|
-League.create!({:league_name => leagueName , :team_no => league[:team]})
+League.create!({:league_name => leagueName , :team_no => league})
 #League.create!({:league_name => 'trialbot', :team_no => '1111', :league_admin => 'abc'})
 #end
 end

@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
 before_filter :set_current_user
 
-#require 'geokit-rails'
+require 'geokit-rails'
 
  def index
   @teams= Team.all  
@@ -33,8 +33,13 @@ def create_leagues
 @teams_all= Team.all
  geo_hash= Hash.new()
  geo_hash = generate_geocoded_address(@teams_all)
+<<<<<<< HEAD
+leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot"]
+   i=0
+=======
    leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot"]
    i=-1
+>>>>>>> d402d8fe2fea956cd160a403fff2dd8a9ab16351
    # check from Leagues name already exist then do i++ TBD
    @teams_all.each do |team|       	
         @league = Array.new()
@@ -68,12 +73,15 @@ def create_leagues
 
 flash[:notice] = "Leagues--- #{@leagues}"
 redirect_to teams_path	
-end
+
+   end
 
 def generate_geocoded_address(teams)
 hash = Hash.new()
 teams.each do |team|
+#if(team[:main_contact_postal_code] !=nil)
   hash[team[:team]] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}")
+#end
 end
 return hash
 end
