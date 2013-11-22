@@ -1,7 +1,8 @@
 class Team < ActiveRecord::Base  
 #require 'smarter_csv' 
 #require 'geokit'
-validates :team, presence: true, :uniqueness => true, :format => { :with => /^\d{4}/, :message => "Only 4 digit numbers allowed"}
+validates :team, :presence => true, :uniqueness => true, :format => { :with => /^\d{4}/, :message => "Only 4 digit numbers allowed"}
+validates :school_district, :presence => true
 validates :state, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
 validates :city, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }
 validates :county, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }

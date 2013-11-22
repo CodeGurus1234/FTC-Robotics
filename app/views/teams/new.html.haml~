@@ -8,6 +8,9 @@
  = label :team, :school_district, 'School District'
  = text_field :team, 'school_district'
 
+ = label :team, :organization, 'Organization'
+ = text_field :team, 'organization'
+
  = label :team, :city, 'City'
  = text_field :team, 'city'
 
