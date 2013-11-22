@@ -22,7 +22,7 @@ def self.upload(file)
 	@team = Team.create_team!(team)
         @teams.push(@team)
     end
-     return @team   
+     return @teams   
   end
 
 
