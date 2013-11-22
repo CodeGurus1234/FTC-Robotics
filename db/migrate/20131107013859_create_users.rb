@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :session_token
       t.string :updatedProfile
+     t.timestamps
       # Add fields that let Rails automatically keep track
       # of when users are added or modified:
 end

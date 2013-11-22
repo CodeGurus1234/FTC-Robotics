@@ -27,8 +27,7 @@ before_filter :set_current_user
  end
 
 def create_leagues
-#@league1 = Array.new()
- # @teams = Team.find_by_id('16')
+
   @teams_all = Team.all
    leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot"]
    i=0
@@ -36,7 +35,6 @@ def create_leagues
    @teams_all.each do |team| 
         @leagues = Array.new()
         @leagueName = leagueNamesArray[i]  
-	#leagueNamesArray[i] = Array.new()
         @league = Array.new()
 	if team[:league_name] == nil and team[:main_contact_postal_code] !=nil
 	 @league.push(team[:team])
@@ -53,6 +51,7 @@ def create_leagues
 					teamtest.update_attributes!(:league_name => @leagueName)
 	                          else
 			                @leagues.push(@league) # Push in leagues table TBD
+                                         League.create_league!(@league,@leagueName)
 			                 i=i+1
 			                break
 			          end

@@ -1,4 +1,5 @@
-class Team < ActiveRecord::Base  
+class Team < ActiveRecord::Base 
+
 #require 'smarter_csv' 
 #require 'geokit'
 validates :team, presence: true, :uniqueness => true, :format => { :with => /^\d{4}/, :message => "Only 4 digit numbers allowed"}
