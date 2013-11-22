@@ -18,7 +18,7 @@ require 'geokit-rails'
 
  def create
    @team = Team.create_team!(params[:team])
-   @user = User.create_user!(params[:team])
+   @user = Team.create_user!(params[:team])
    if @team.save
 	flash[:notice] = "Welcome #{@team.team}. Your account has been created"	
 	redirect_to login_path	
@@ -33,10 +33,6 @@ def create_leagues
 @teams_all= Team.all
 geo_hash= Hash.new()
  geo_hash = generate_geocoded_address(@teams_all)
-###########################################################
- #@league1 = Array.new()
- # @teams = Team.find_by_id('16')
-  #@teams_all = Team.all
    leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot"]
    i=0
    # check from Leagues name already exist then do i++ TBD
@@ -70,18 +66,14 @@ geo_hash= Hash.new()
 			        #i=i+1
 				break
 			#end
-		     end
-            
+		     end            
           end #inner each ends
         end	
+	@leagues.push(@league)
     end #outer do ends
-#puts @leagues
+
 flash[:notice] = "Leagues--- #{@leagues}"
 redirect_to teams_path	
-##########################################
-      #distance = hashes[6072].distance_to(hashes[5063])
-	#flash[:notice] = "Welcome #{distance}. Your account has been created"
-#redirect_to users_path
 end
 
 def generate_geocoded_address(teams)
