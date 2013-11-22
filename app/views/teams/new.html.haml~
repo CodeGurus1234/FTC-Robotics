@@ -5,9 +5,6 @@
  = label :team, :team, 'Team Number'
  = text_field :team, 'team'
 
- = label :team, :main_contact_email, 'Coach Email'
- = text_field :user, 'main_contact_email'
-
  = label :team, :school_district, 'School District'
  = text_field :team, 'school_district'
 
@@ -22,9 +19,6 @@
 
  = label :team, :country, 'Country'
  = text_field :team, 'country'
-
- = label :team, :zip, 'Zip Code'
- = text_field :team, 'zip'
 
  = label :team, :coach_first, 'Coach Name'
  = text_field :team, 'main_contact'
@@ -46,9 +40,6 @@
 
  = label :team, :"main_contact_phone/ext.", 'Coach Phone'
  = text_field :team, "main_contact_phone/ext."
- 
- = label :team, :school_district, 'School District'
- = text_field :team, 'school_district'
 
  = label :team, :organization_type, 'Public School'
  = radio_button :team, 'organization_type', 'Public School'
