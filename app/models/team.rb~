@@ -2,7 +2,10 @@ class Team < ActiveRecord::Base
 
 #require 'smarter_csv' 
 #require 'geokit'
-validates :team, presence: true, :uniqueness => true, :format => { :with => /^\d{4}/, :message => "Only 4 digit numbers allowed"}
+<<<<<<< HEAD
+=======
+validates :team, :presence => true, :uniqueness => true, :format => { :with => /^\d{4}/, :message => "Only 4 digit numbers allowed"}
+validates :school_district, :presence => true
 validates :state, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
 validates :city, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }
 validates :county, :format => { :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" }
@@ -14,6 +17,7 @@ validates :main_contact_phone, :format => { :with => /^\(\d{3}\) ?\d{3}( |-)?\d{
 validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message => "Only valid email address formats allowed" }
 
 
+>>>>>>> 6cab8ca825210782c76419bfa1ea4651cd08cfe1
 def self.upload(file)
     data = SmarterCSV.process(file)    
     @teams = Array.new()
