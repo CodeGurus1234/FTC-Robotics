@@ -15,7 +15,7 @@ before_filter :set_current_user
 
  def create
    @team = Team.create_team!(params[:team])
-   @user = User.create_user!(params[:team])
+   @user = Team.create_user!(params[:team])
    if @team.save
 	flash[:notice] = "Welcome #{@team.team}. Your account has been created"
 	redirect_to login_path	
