@@ -19,7 +19,11 @@ class CreateTeams < ActiveRecord::Migration
 	t.string :school_district
         t.string :organization_type
 	t.string :league_name
+<<<<<<< HEAD
+        t.references :leagues
+=======
 	t.GeoLoc :geocoded_address
+>>>>>>> aeddef86a5f118f177bb56ae9a74254a2f7d6893
       t.timestamps
     end
   end
