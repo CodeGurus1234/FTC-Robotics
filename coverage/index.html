@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Ftc-leagues</title>
+    <title>Code coverage for Ftctoday</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.7.1/application.js' type='text/javascript'></script>    
     <link href='./assets/0.7.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-11-10T20:36:57-08:00">2013-11-10T20:36:57-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-11-22T15:39:32-08:00">2013-11-22T15:39:32-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">45.61%</span></span>
+    (<span class="covered_percent"><span class="red">57.22%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.79
+       <span class="green">
+         1.14
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>9</b> files in total.
-    <b>57</b> relevant lines. 
-    <span class="green"><b>26</b> lines covered</span> and
-    <span class="red"><b>31</b> lines missed </span>
+    <b>12</b> files in total.
+    <b>180</b> relevant lines. 
+    <span class="green"><b>103</b> lines covered</span> and
+    <span class="red"><b>77</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,19 +51,29 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#06730aa72f12f88760242a0455ae17a4cea9b5c8" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="red strong">75.0 %</td>
+        <td class="strong"><a href="#6a93596e346d45ea7ee050a59b9995a9a76ed621" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
         <td>7</td>
         <td>4</td>
-        <td>3</td>
-        <td>1</td>
-        <td>0.8</td>
+        <td>4</td>
+        <td>0</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#a88ca6140e9f57735b4dcf448b0ac83de73d53e5" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
+        <td class="strong"><a href="#59acea25cbcdff02fa6b65ac499730fa0c85bd90" class="src_link" title="app/controllers/leagues_controller.rb">app/controllers/leagues_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>83</td>
+        <td>40</td>
+        <td>40</td>
+        <td>0</td>
+        <td>2.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#088e9b9a6fd3caaa19b8b1c26f8918419f80cc0a" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
         <td class="red strong">25.0 %</td>
-        <td>37</td>
+        <td>40</td>
         <td>20</td>
         <td>5</td>
         <td>15</td>
@@ -71,73 +81,93 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#a9f130713a427240dc7b8dc05b6f11b1ce41a1ab" class="src_link" title="app/controllers/teams_controller.rb">app/controllers/teams_controller.rb</a></td>
-        <td class="red strong">47.37 %</td>
-        <td>40</td>
+        <td class="strong"><a href="#08f9c3467eee07a4830c8ef6060b15ed6cb3ad39" class="src_link" title="app/controllers/teams_controller.rb">app/controllers/teams_controller.rb</a></td>
+        <td class="red strong">27.94 %</td>
+        <td>111</td>
+        <td>68</td>
         <td>19</td>
-        <td>9</td>
-        <td>10</td>
+        <td>49</td>
         <td>0.6</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#70594882f1ee2fb351976215237d1d5e163c06fb" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#fdcadd9c1b3f81beab2d9226688b18f5b793a9b3" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#99b2bb6c0d4294efddd079f3549209b55acf9f60" class="src_link" title="app/helpers/teams_helper.rb">app/helpers/teams_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#a0c765455dc0fef450e237b8a31647c986c29a4c" class="src_link" title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#e3591063a8595b01670a4a12a66b1bc889efeb4d" class="src_link" title="app/models/team.rb">app/models/team.rb</a></td>
-        <td class="red strong">44.44 %</td>
-        <td>20</td>
-        <td>9</td>
-        <td>4</td>
+        <td class="strong"><a href="#65e456be8c7e26420ef9a55e2e6fe539eaded5a9" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
+        <td class="red strong">62.5 %</td>
+        <td>16</td>
+        <td>8</td>
         <td>5</td>
-        <td>0.4</td>
+        <td>3</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#9fdd0a0e728815e6b8ab9117d1aa0739653f0df0" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
+        <td class="strong"><a href="#514d142003e46106797f0f527dc69778ccd29afc" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#dac2bfffcb9b607c47bab9199a2688886f8e0fa0" class="src_link" title="app/helpers/leagues_helper.rb">app/helpers/leagues_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#176a011a776ab0781fd8e27f607f56dc41e4cf4f" class="src_link" title="app/helpers/teams_helper.rb">app/helpers/teams_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cbdd8b875312e200d64a75b6e2823288dea07a93" class="src_link" title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#2667cda963afed5d9a30cedbb41afcd7637b2bf7" class="src_link" title="app/models/league.rb">app/models/league.rb</a></td>
+        <td class="red strong">75.0 %</td>
+        <td>10</td>
+        <td>4</td>
         <td>3</td>
         <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>0.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#5b08f7cacca81295ecc0dd683e1fdfa89ba1c829" class="src_link" title="app/models/team.rb">app/models/team.rb</a></td>
+        <td class="red strong">75.0 %</td>
+        <td>47</td>
+        <td>28</td>
+        <td>21</td>
+        <td>7</td>
+        <td>1.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#b4741bbe29fa7de056abf254936991093fea7f4a" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>8</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0.5</td>
       </tr>
       
     </tbody>
@@ -149,20 +179,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">40.91%</span></span>
+    (<span class="covered_percent"><span class="red">52.14%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.68
+       <span class="green">
+         1.32
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
-    <b>4</b> files in total.
-    <b>44</b> relevant lines. 
-    <span class="green"><b>18</b> lines covered</span> and
-    <span class="red"><b>26</b> lines missed </span>
+    <b>5</b> files in total.
+    <b>140</b> relevant lines. 
+    <span class="green"><b>73</b> lines covered</span> and
+    <span class="red"><b>67</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -179,19 +209,29 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#06730aa72f12f88760242a0455ae17a4cea9b5c8" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="red strong">75.0 %</td>
+        <td class="strong"><a href="#6a93596e346d45ea7ee050a59b9995a9a76ed621" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
         <td>7</td>
         <td>4</td>
-        <td>3</td>
-        <td>1</td>
-        <td>0.8</td>
+        <td>4</td>
+        <td>0</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#a88ca6140e9f57735b4dcf448b0ac83de73d53e5" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
+        <td class="strong"><a href="#59acea25cbcdff02fa6b65ac499730fa0c85bd90" class="src_link" title="app/controllers/leagues_controller.rb">app/controllers/leagues_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>83</td>
+        <td>40</td>
+        <td>40</td>
+        <td>0</td>
+        <td>2.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#088e9b9a6fd3caaa19b8b1c26f8918419f80cc0a" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
         <td class="red strong">25.0 %</td>
-        <td>37</td>
+        <td>40</td>
         <td>20</td>
         <td>5</td>
         <td>15</td>
@@ -199,23 +239,23 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#a9f130713a427240dc7b8dc05b6f11b1ce41a1ab" class="src_link" title="app/controllers/teams_controller.rb">app/controllers/teams_controller.rb</a></td>
-        <td class="red strong">47.37 %</td>
-        <td>40</td>
+        <td class="strong"><a href="#08f9c3467eee07a4830c8ef6060b15ed6cb3ad39" class="src_link" title="app/controllers/teams_controller.rb">app/controllers/teams_controller.rb</a></td>
+        <td class="red strong">27.94 %</td>
+        <td>111</td>
+        <td>68</td>
         <td>19</td>
-        <td>9</td>
-        <td>10</td>
+        <td>49</td>
         <td>0.6</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#70594882f1ee2fb351976215237d1d5e163c06fb" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="strong"><a href="#65e456be8c7e26420ef9a55e2e6fe539eaded5a9" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
+        <td class="red strong">62.5 %</td>
+        <td>16</td>
+        <td>8</td>
+        <td>5</td>
+        <td>3</td>
+        <td>0.6</td>
       </tr>
       
     </tbody>
@@ -226,20 +266,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">50.0%</span></span>
+    (<span class="covered_percent"><span class="red">72.22%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.7
+       <span class="green">
+         1.03
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
-    <b>2</b> files in total.
-    <b>10</b> relevant lines. 
-    <span class="green"><b>5</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <b>3</b> files in total.
+    <b>36</b> relevant lines. 
+    <span class="green"><b>26</b> lines covered</span> and
+    <span class="red"><b>10</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -256,23 +296,33 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#e3591063a8595b01670a4a12a66b1bc889efeb4d" class="src_link" title="app/models/team.rb">app/models/team.rb</a></td>
-        <td class="red strong">44.44 %</td>
-        <td>20</td>
-        <td>9</td>
+        <td class="strong"><a href="#2667cda963afed5d9a30cedbb41afcd7637b2bf7" class="src_link" title="app/models/league.rb">app/models/league.rb</a></td>
+        <td class="red strong">75.0 %</td>
+        <td>10</td>
         <td>4</td>
-        <td>5</td>
-        <td>0.4</td>
+        <td>3</td>
+        <td>1</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#9fdd0a0e728815e6b8ab9117d1aa0739653f0df0" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="strong"><a href="#5b08f7cacca81295ecc0dd683e1fdfa89ba1c829" class="src_link" title="app/models/team.rb">app/models/team.rb</a></td>
+        <td class="red strong">75.0 %</td>
+        <td>47</td>
+        <td>28</td>
+        <td>21</td>
+        <td>7</td>
+        <td>1.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#b4741bbe29fa7de056abf254936991093fea7f4a" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>8</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0.5</td>
       </tr>
       
     </tbody>
@@ -330,9 +380,9 @@
   </h2>
   <a name="Helpers"></a>
   <div>
-    <b>3</b> files in total.
-    <b>3</b> relevant lines. 
-    <span class="green"><b>3</b> lines covered</span> and
+    <b>4</b> files in total.
+    <b>4</b> relevant lines. 
+    <span class="green"><b>4</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -350,7 +400,7 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#fdcadd9c1b3f81beab2d9226688b18f5b793a9b3" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
+        <td class="strong"><a href="#514d142003e46106797f0f527dc69778ccd29afc" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>2</td>
         <td>1</td>
@@ -360,7 +410,7 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#99b2bb6c0d4294efddd079f3549209b55acf9f60" class="src_link" title="app/helpers/teams_helper.rb">app/helpers/teams_helper.rb</a></td>
+        <td class="strong"><a href="#dac2bfffcb9b607c47bab9199a2688886f8e0fa0" class="src_link" title="app/helpers/leagues_helper.rb">app/helpers/leagues_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>2</td>
         <td>1</td>
@@ -370,7 +420,17 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#a0c765455dc0fef450e237b8a31647c986c29a4c" class="src_link" title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
+        <td class="strong"><a href="#176a011a776ab0781fd8e27f607f56dc41e4cf4f" class="src_link" title="app/helpers/teams_helper.rb">app/helpers/teams_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cbdd8b875312e200d64a75b6e2823288dea07a93" class="src_link" title="app/helpers/users_helper.rb">app/helpers/users_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>2</td>
         <td>1</td>
@@ -468,14 +528,14 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="06730aa72f12f88760242a0455ae17a4cea9b5c8">
+        <div class="source_table" id="6a93596e346d45ea7ee050a59b9995a9a76ed621">
   <div class="header">
     <h3>app/controllers/application_controller.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>4</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -506,8 +566,8 @@
           <code class="ruby">  @current_user||=session[:session_token]&amp;&amp;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
           <code class="ruby">			 User.find_by_session_token(session[:session_token])</code>
         </li>
@@ -528,7 +588,523 @@
   </pre>
 </div>
       
-        <div class="source_table" id="a88ca6140e9f57735b4dcf448b0ac83de73d53e5">
+        <div class="source_table" id="59acea25cbcdff02fa6b65ac499730fa0c85bd90">
+  <div class="header">
+    <h3>app/controllers/leagues_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>40</b> relevant lines. 
+      <span class="green"><b>40</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class LeaguesController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">  # GET /leagues</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  # GET /leagues.json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @leagues = League.all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      format.html # index.html.erb</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      format.json { render json: @leagues }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  # GET /leagues/1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  # GET /leagues/1.json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @league = League.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      format.html # show.html.erb</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      format.json { render json: @league }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  # GET /leagues/new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  # GET /leagues/new.json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def new</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @league = League.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      format.html # new.html.erb</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      format.json { render json: @league }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  # GET /leagues/1/edit</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def edit</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @league = League.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">  # POST /leagues</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  # POST /leagues.json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="43">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @league = League.new(params[:league])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="45">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="46">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      if @league.save</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="47">
+          <span class="hits">6</span>
+          
+          <code class="ruby">        format.html { redirect_to @league, notice: 'League was successfully created.' }</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="48">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        format.json { render json: @league, status: :created, location: @league }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="50">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        format.html { render action: &quot;new&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="51">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        format.json { render json: @league.errors, status: :unprocessable_entity }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">  # PUT /leagues/1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">  # PUT /leagues/1.json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="59">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @league = League.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="61">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="62">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      if @league.update_attributes(params[:league])</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="63">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        format.html { redirect_to @league, notice: 'League was successfully updated.' }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="64">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        format.json { head :no_content }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="66">
+          <span class="hits">6</span>
+          
+          <code class="ruby">        format.html { render action: &quot;edit&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="67">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        format.json { render json: @league.errors, status: :unprocessable_entity }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">  # DELETE /leagues/1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">  # DELETE /leagues/1.json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="75">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @league = League.find(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="76">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @league.destroy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="78">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="79">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      format.html { redirect_to leagues_url }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="80">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      format.json { head :no_content }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="088e9b9a6fd3caaa19b8b1c26f8918419f80cc0a">
   <div class="header">
     <h3>app/controllers/sessions_controller.rb</h3>
     <h4><span class="red">25.0 %</span> covered</h4>
@@ -611,154 +1187,172 @@
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">        puts userrole</code>
+          <code class="ruby">	if exist   </code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">	if exist   </code>
+          <code class="ruby">	   session[:session_token] = exist.session_token</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">	   #session[:session_token] = exist.session_token</code>
+          <code class="ruby">            if exist.role == &quot;Global_Admin&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">           if exist.role == &quot;Global_Admin&quot;</code>
+          <code class="ruby">            flash[:notice] = &quot;Hi!! Becca You are on Global Admin Home Page&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">            flash[:notice] = &quot;Hi!! Becca You are on Global Admin Home Page&quot;</code>
+          <code class="ruby">	    redirect_to users_path</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
-          
-          <code class="ruby">	    redirect_to teams_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">            end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="18">
           
           
-          <code class="ruby">           if exist.role == &quot;Team_Member&quot;</code>
+          <code class="ruby">            if exist.role == &quot;Team_Member&quot;  </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">            flash[:notice] = &quot;Hi!! #{@user.user_id} You are on your team's Home Page&quot;</code>
+          <code class="ruby">             #if exist.updatedProfile == 'no'</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">            redirect_to team_path(@user.user_id)</code>
+          <code class="ruby">              #flash[:notice] = &quot;Hi!! #{@user.user_id} Please update your profile&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">              #redirect_to edit_team_path(1234)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">           end</code>
+          <code class="ruby">             #else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="missed" data-hits="0" data-linenumber="23">
           
           
-          <code class="ruby">	else</code>
+          <code class="ruby">              flash[:notice] = &quot;Hi!! #{@user.user_id} You are on your team's Home Page&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="24">
           
           
-          <code class="ruby">	   flash[:notice] = &quot;Login/password combination&quot;</code>
+          <code class="ruby">              redirect_to team_path(@user.user_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">	   redirect_to login_path	</code>
+          <code class="ruby">             #end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby">           end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">   </code>
+          <code class="ruby">	else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">	  flash[:notice] = &quot;Login/password combination&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">	  redirect_to login_path	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">        end   </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="missed" data-hits="0" data-linenumber="34">
           
           
           <code class="ruby">  session.clear</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="missed" data-hits="0" data-linenumber="35">
           
           
-          <code class="ruby">  redirect_to teams_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">end	</code>
+          <code class="ruby">  redirect_to login_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">end	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby"></code>
@@ -768,14 +1362,14 @@
   </pre>
 </div>
       
-        <div class="source_table" id="a9f130713a427240dc7b8dc05b6f11b1ce41a1ab">
+        <div class="source_table" id="08f9c3467eee07a4830c8ef6060b15ed6cb3ad39">
   <div class="header">
     <h3>app/controllers/teams_controller.rb</h3>
-    <h4><span class="red">47.37 %</span> covered</h4>
+    <h4><span class="red">27.94 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <b>68</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>49</b> lines missed.</span>
     </div>
   </div>
   
@@ -788,235 +1382,661 @@
           <code class="ruby">class TeamsController &lt; ApplicationController</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">before_filter :set_current_user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby"> def index</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">  @teams= Team.all</code>
+          <code class="ruby">#require 'geokit-rails'</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> def index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">  @teams= Team.all  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
           <code class="ruby"> end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  def new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">    # default: render 'new' template</code>
+          <code class="ruby"> def edit</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"> # default: render 'edit' template</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby"> def show</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby"> # default: render 'show' template</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby"> def create</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">   @team = Team.create_team!(params[:team])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
-          
-          <code class="ruby">   if @team.save</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
-          <code class="ruby">	flash[:notice] = &quot;Welcome #{@team.team}. Your account has been created&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
-          
-          <code class="ruby">	redirect_to login_path	</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">   else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
-          
-          <code class="ruby">	flash[:notice] = &quot; Sorry -- #{@team.errors.full_messages}.Try again&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
-          
-          <code class="ruby">	redirect_to new_team_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"> end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby"> def import  </code>
+          <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="29">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">  if(params[:file] == nil)</code>
+          
+          <code class="ruby">    # default: render 'new' template</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="30">
-          <span class="hits">2</span>
-          
-          <code class="ruby">	flash[:notice] =&quot;Sorry! No file selected. Please select a file and try again.&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="31">
-          <span class="hits">2</span>
-          
-          <code class="ruby">	redirect_to teams_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">  else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="33">
-          
-          
-          <code class="ruby">       Team.upload(params[:file].path)  </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="34">
-          
-          
-          <code class="ruby">       flash[:notice] = &quot;Team data uploaded&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="35">
-          
-          
-          <code class="ruby">       redirect_to teams_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> def show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"> # default: render 'show' template</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> def create</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="20">
+          <span class="hits">5</span>
+          
+          <code class="ruby">   @team = Team.create_team!(params[:team])</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
+          
+          <code class="ruby">   @user = Team.create_user!(params[:team])</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="22">
+          <span class="hits">5</span>
+          
+          <code class="ruby">   if @team.save</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">	flash[:notice] = &quot;Welcome #{@team.team}. Your account has been created&quot;	</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">	redirect_to login_path	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">   else</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="27">
+          <span class="hits">5</span>
+          
+          <code class="ruby">	flash[:notice] = &quot; Sorry -- #{@team.errors.full_messages}.Try again&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="28">
+          <span class="hits">5</span>
+          
+          <code class="ruby">	redirect_to new_team_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def create_leagues</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
+          <code class="ruby">@teams_all= Team.all</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby"> geo_hash= Hash.new()</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby"> geo_hash = generate_geocoded_address(@teams_all)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">   leagueNamesArray = [&quot;applebot&quot;,&quot;kiwibot&quot;,&quot;bananabot&quot;,&quot;orangebot&quot;,&quot;raspbot&quot;,&quot;cherrybot&quot;,&quot;rubybot&quot;,&quot;pumpkinbot&quot;,&quot;grapebot&quot;,&quot;lemonbot&quot;,&quot;limebot&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">   i=-1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">   # check from Leagues name already exist then do i++ TBD</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">   @teams_all.each do |team|       	</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">        @league = Array.new()</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="41">
+          
+          
+          <code class="ruby">	 if team[:league_name] == nil and team[:main_contact_postal_code] !=nil</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
+          
+          <code class="ruby">          i+=1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="43">
+          
+          
+          <code class="ruby">         @leagueName = leagueNamesArray[i] </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">	 @league.push(team[:team])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
+          <code class="ruby">	 team.update_attributes!(:league_name =&gt; @leagueName)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
+          
+          <code class="ruby">         team.save!</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
+          
+          <code class="ruby">         League.create_league!(team[:team],@leagueName)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
+          
+          <code class="ruby">	 @centre = geo_hash[team[:team]]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
+          
+          <code class="ruby">	 @teams_all.each do |teamtest|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
+          
+          <code class="ruby">	   if @league.length &lt; 16 </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
+          
+          <code class="ruby">		    if teamtest[:league_name] == nil &amp;&amp; teamtest[:main_contact_postal_code] !=nil &amp;&amp; !@league.include?(teamtest[:team])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
+          
+          <code class="ruby">			      @test_if_in_radius = geo_hash[teamtest[:team]]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
+          
+          <code class="ruby">			      distance = @centre.distance_to(@test_if_in_radius)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="54">
+          
+          
+          <code class="ruby">			      if distance &lt;50</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="55">
+          
+          
+          <code class="ruby">					@league.push(teamtest[:team])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="56">
+          
+          
+          <code class="ruby">					teamtest.update_attributes!(:league_name =&gt; @leagueName)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="57">
+          
+          
+          <code class="ruby">					teamtest.save!</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
+          
+          <code class="ruby">					League.create_league!(teamtest[:team],@leagueName)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">			      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">		     end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">            else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="62">
+          
+          
+          <code class="ruby">		break</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">            end            </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">          end #inner each ends</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">        end	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">	#@leagues.push(@league)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">    end #outer do ends</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="missed" data-hits="0" data-linenumber="69">
+          
+          
+          <code class="ruby">flash[:notice] = &quot;Leagues--- #{@leagues}&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">redirect_to teams_path	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def generate_geocoded_address(teams)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="74">
+          
+          
+          <code class="ruby">hash = Hash.new()</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="75">
+          
+          
+          <code class="ruby">teams.each do |team|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="76">
+          
+          
+          <code class="ruby">  hash[team[:team]] = Geokit::Geocoders::GoogleGeocoder3.geocode(&quot;#{team[:main_contact_postal_code]}&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="78">
+          
+          
+          <code class="ruby">return hash</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> def import  </code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="83">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  if(params[:file] == nil)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="84">
+          <span class="hits">2</span>
+          
+          <code class="ruby">	flash[:notice] =&quot;Sorry! No file selected. Please select a file and try again.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="85">
+          <span class="hits">2</span>
+          
+          <code class="ruby">	redirect_to users_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">  else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="87">
+          
+          
+          <code class="ruby">       teams = Team.upload(params[:file].path) </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="88">
+          
+          
+          <code class="ruby">       @message = String.new (&quot;Hi!!&quot;)    </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="89">
+          
+          
+          <code class="ruby">       teams.each do |team|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="90">
+          
+          
+          <code class="ruby">	       if !(team.errors).empty?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="91">
+          
+          
+          <code class="ruby">		@message.concat(&quot;Sorry --#{team.team} was not added because of following erros #{team.errors.full_messages}.&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">	       end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">       end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="94">
+          
+          
+          <code class="ruby">        if @message.nil?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="95">
+          
+          
+          <code class="ruby">        flash[:notice] = &quot;Team data Uploaded&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="96">
+          
+          
+          <code class="ruby">        redirect_to teams_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="98">
+          
+          
+          <code class="ruby">        flash[:notice] = &quot;#{@message}.Please try again&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="99">
+          
+          
+          <code class="ruby">	redirect_to teams_path      </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def update</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="105">
+          
+          
+          <code class="ruby">    @team = Team.find params[:team]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="106">
+          
+          
+          <code class="ruby">    @team.update_attributes!(params[:team])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="107">
+          
+          
+          <code class="ruby">    flash[:notice] = &quot;Profile was successfully updated.&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="108">
+          
+          
+          <code class="ruby">    redirect_to team_path(@team)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
           
           
           <code class="ruby">end</code>
@@ -1026,14 +2046,14 @@
   </pre>
 </div>
       
-        <div class="source_table" id="70594882f1ee2fb351976215237d1d5e163c06fb">
+        <div class="source_table" id="65e456be8c7e26420ef9a55e2e6fe539eaded5a9">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">62.5 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -1046,7 +2066,91 @@
           <code class="ruby">class UsersController &lt; ApplicationController</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">before_filter :set_current_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  #default page</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def create</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  #@team = Team.create_team!(params[:user])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby">  @user = User.create_user!(params[:user])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby"> if @user.save</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby"> redirect_to login_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  #default page</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def create_leagues</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
@@ -1056,7 +2160,7 @@
   </pre>
 </div>
       
-        <div class="source_table" id="fdcadd9c1b3f81beab2d9226688b18f5b793a9b3">
+        <div class="source_table" id="514d142003e46106797f0f527dc69778ccd29afc">
   <div class="header">
     <h3>app/helpers/application_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1086,7 +2190,37 @@
   </pre>
 </div>
       
-        <div class="source_table" id="99b2bb6c0d4294efddd079f3549209b55acf9f60">
+        <div class="source_table" id="dac2bfffcb9b607c47bab9199a2688886f8e0fa0">
+  <div class="header">
+    <h3>app/helpers/leagues_helper.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module LeaguesHelper</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="176a011a776ab0781fd8e27f607f56dc41e4cf4f">
   <div class="header">
     <h3>app/helpers/teams_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1116,7 +2250,7 @@
   </pre>
 </div>
       
-        <div class="source_table" id="a0c765455dc0fef450e237b8a31647c986c29a4c">
+        <div class="source_table" id="cbdd8b875312e200d64a75b6e2823288dea07a93">
   <div class="header">
     <h3>app/helpers/users_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1146,14 +2280,14 @@
   </pre>
 </div>
       
-        <div class="source_table" id="e3591063a8595b01670a4a12a66b1bc889efeb4d">
+        <div class="source_table" id="2667cda963afed5d9a30cedbb41afcd7637b2bf7">
   <div class="header">
-    <h3>app/models/team.rb</h3>
-    <h4><span class="red">44.44 %</span> covered</h4>
+    <h3>app/models/league.rb</h3>
+    <h4><span class="red">75.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -1163,25 +2297,103 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Team &lt; ActiveRecord::Base  </code>
+          <code class="ruby">class League &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_accessible :league_admin, :league_name, :team_no</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def self.create_league!(league,leagueName)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">#leagues.each do |team|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">League.create!({:league_name =&gt; leagueName , :team_no =&gt; league})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">#League.create!({:league_name =&gt; 'trialbot', :team_no =&gt; '1111', :league_admin =&gt; 'abc'})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">#end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="5b08f7cacca81295ecc0dd683e1fdfa89ba1c829">
+  <div class="header">
+    <h3>app/models/team.rb</h3>
+    <h4><span class="red">75.0 %</span> covered</h4>
+    <div>
+      <b>28</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Team &lt; ActiveRecord::Base </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby">#require 'smarter_csv' </code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">validates :team, presence: true, :uniqueness =&gt; true</code>
+          
+          <code class="ruby">#require 'smarter_csv' </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#require 'geokit'</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -1193,73 +2405,73 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">def self.upload(file)</code>
+          <code class="ruby">validates :team, :presence =&gt; true, :uniqueness =&gt; true, :format =&gt; { :with =&gt; /^\d{4}/, :message =&gt; &quot;Only 4 digit numbers allowed&quot;}</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">    data = SmarterCSV.process(file)    </code>
+          <code class="ruby">#validates :school_district, :presence =&gt; true</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    data.each do |team|	</code>
+          <code class="ruby">validates :state, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	team[:date_registered]= DateTime.strptime(team[:date_registered], &quot;%m/%d/%Y&quot;)</code>
+          <code class="ruby">validates :city, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	Team.create_team!(team)</code>
+          <code class="ruby">validates :county, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">validates :country, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">validates :main_contact, :format =&gt; { :with =&gt; /\A.*[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">validates :main_contact_city, :presence =&gt; true #:format =&gt; { :with =&gt; /\A.*[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.create_team!(team)	</code>
+          <code class="ruby">validates :main_contact_postal_code, :format =&gt; { :with =&gt; /^\d{5}(-\d{4})?$/, :message =&gt; &quot;Only 5 digit numbers like XXXXX or 9 digit numbers like xxxxx-xxxx allowed&quot; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">validates :main_contact_phone, :format =&gt; { :with =&gt; /^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}/, :message =&gt; &quot;Only  digit numbers like XXXXXXXXXX or xxx-xxx-xxxx or (xxx)xxx-xxxx allowed&quot; }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	Team.create!({:team =&gt; team[:team], :organization =&gt; team[:organization], :city=&gt;team[:city], :state=&gt;team[:state], :date_registered=&gt; (Time.now).strftime('%m/%d/%Y'), :main_contact=&gt;team[:main_contact], :main_contact_address=&gt;team[:main_contact_address], :main_contact_city=&gt;team[:main_contact_city], :&quot;main_contact_state&quot;=&gt;team[:main_contact_state], :main_contact_postal_code=&gt;team[:main_contact_postal_code], :country=&gt;team[:country], :main_contact_email=&gt;team[:main_contact_email], :main_contact_phone=&gt;team[:main_contact_phone], :county=&gt;team[:county], :organization_type=&gt;team[:organization_type],:school_district=&gt;team[:school_district]})</code>
+          <code class="ruby">validates :main_contact_email, :format =&gt; { :with =&gt; /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message =&gt; &quot;Only valid email address formats allowed&quot; }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -1268,13 +2480,175 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def self.upload(file)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">    data = SmarterCSV.process(file)    </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">    @teams = Array.new()</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">    data.each do |team|	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">	#team[:geocoded_address] = Geokit::Geocoders::GoogleGeocoder3.geocode(&quot;#{team[:main_contact_postal_code]}&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">	@team = Team.create_team!(team)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">        @teams.push(@team)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">     return @teams   </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.create_team!(team)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="32">
+          <span class="hits">5</span>
+          
+          <code class="ruby">  if team[:date_registered].nil?</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="33">
+          <span class="hits">5</span>
+          
+          <code class="ruby">  dateRegistered = Time.now #).strftime('%m/%d/%Y')</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">  else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">  dateRegistered = DateTime.strptime(team[:date_registered], &quot;%m/%d/%Y&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  end	</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="37">
+          <span class="hits">5</span>
+          
+          <code class="ruby">Team.create({:team =&gt; team[:team], :organization =&gt; team[:organization], :city=&gt;team[:city], :state=&gt;team[:state], :date_registered=&gt;dateRegistered, :main_contact=&gt;team[:main_contact], :main_contact_address=&gt;team[:main_contact_address], :main_contact_city=&gt;team[:main_contact_city], :&quot;main_contact_state&quot;=&gt;team[:&quot;main_contact_state/main_contact_prov&quot;], :main_contact_postal_code=&gt;team[:main_contact_postal_code], :country=&gt;team[:country], :main_contact_email=&gt;team[:main_contact_email], :main_contact_phone=&gt;team[:&quot;main_contact_phone/ext.&quot;], :county=&gt;team[:county], :organization_type=&gt;team[:organization_type],:school_district=&gt;team[:school_district]})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def self.create_user!(team)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="41">
+          <span class="hits">5</span>
+          
+          <code class="ruby">session_token=SecureRandom.base64</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="42">
+          <span class="hits">5</span>
+          
+          <code class="ruby">team_id = team[:team].to_s</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="43">
+          <span class="hits">5</span>
+          
+          <code class="ruby">email = team[:main_contact_email].to_s</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="44">
+          <span class="hits">5</span>
+          
+          <code class="ruby"> User.create!( {:user_id =&gt; team_id, :email =&gt; email,  :role =&gt; 'Team_Member', :password =&gt; team_id, :session_token =&gt; session_token})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">end</code>
@@ -1284,14 +2658,14 @@
   </pre>
 </div>
       
-        <div class="source_table" id="9fdd0a0e728815e6b8ab9117d1aa0739653f0df0">
+        <div class="source_table" id="b4741bbe29fa7de056abf254936991093fea7f4a">
   <div class="header">
     <h3>app/models/user.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">50.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -1310,7 +2684,37 @@
           <code class="ruby">  # attr_accessible :title, :body</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def self.create_user!(user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">  session_token=SecureRandom.base64</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">  User.create! ( {:user_id =&gt; user[:user_id], :email =&gt; user[:email],  :role =&gt; 'Team_Member', :password =&gt; user[:password], :session_token =&gt; 			session_token, :updatedProfile =&gt; 'no'})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>

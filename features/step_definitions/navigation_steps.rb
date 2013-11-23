@@ -2,6 +2,8 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 
 
 
+
+
 When /^I go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -81,3 +83,51 @@ end
 Then /^page should have (.+) message "([^\"]*)"$/ do |type, text|
   page.has_css?("p.#{type}", :text => text, :visible => true)
 end
+
+
+
+
+
+Given(/^I am on the users page$/) do
+ visit users_path
+end
+
+Then(/^I should see teams sorted in designated leagues$/) do
+  visit users_path
+end
+
+
+
+
+
+
+Given(/^I am team '(\d+)'$/) do |arg1|
+  visit teams_path
+end
+
+Given(/^I am signed in$/) do
+  visit teams_path
+end
+
+When(/^I see team '(\d+)'$/) do |arg1|
+page.should_not have_content(arg1)
+end
+
+Then(/^I should see 'Bananabots' in the table$/) do
+  page.should have_content('')
+end
+
+
+
+Given(/^I am signed in as "([^\"]*)"$/) do |user|
+  visit leagues_path
+end
+
+When(/^I visit the leagues page$/) do
+  visit leagues_path
+end
+
+Then(/^I should see all the leagues$/) do
+page.should have_content('')
+end
+

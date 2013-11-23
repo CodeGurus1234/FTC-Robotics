@@ -11,13 +11,13 @@ Scenario:
   And I fill in "Chicago" for "team_state"
   And I fill in "Massachussetes" for "team_state"
   And I fill in "Johnson" for "team_county"
-  And I fill in "52246" for "team_zip"
   And I fill in "Jay Z" for "team_main_contact"
   And I fill in "Santa Monica Blvd" for "team_main_contact_address"
   And I fill in "Los Angeles" for "team_main_contact_city"
-  And I fill in "California" for "user_main_contact_state"
   And I fill in "31210" for "user_main_contact_postal_code"
   And I fill in "jayz@yahoo.com" for "team_main_contact_email"
   And I fill in "630-209-4505" for "team_main_contact_phone/ext."
   When I press "Create Team"
 
+
+  Then I should see the account has been created
