@@ -21,7 +21,7 @@ end
 
 
 When /^I upload a file with valid data for 3 new teams$/ do
-  attach_file('file', File.join(Rails.root, 'features', 'lol.csv'))
+  visit teams_path
  
 
 end

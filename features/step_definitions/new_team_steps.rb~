@@ -14,7 +14,7 @@ Given /^I am on the teams page$/ do
 
 
  end
-Then /^I should see the  teams added$/ do
+Then /^I should see the teams added$/ do
 
   visit teams_path
 end
