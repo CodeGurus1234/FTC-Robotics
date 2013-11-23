@@ -21,7 +21,10 @@ group :test do
 end
 
 group :production do
+  gem 'geocoder'
+  gem 'geokit-rails'
   gem 'pg' # for post gress databses
+  gem 'smarter_csv'
  end
 
 # Gems used only for assets and not required
