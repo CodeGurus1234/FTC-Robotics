@@ -3,20 +3,23 @@ before_filter :set_current_user
 
 require 'geokit-rails'
 
- def index
+def index
   @teams= Team.all  
- end
- def edit
- # default: render 'edit' template
- end
-  def new
-    # default: render 'new' template
-  end
- def show
- # default: render 'show' template
- end
+end
 
- def create
+def edit
+ # default: render 'edit' template
+end
+
+def new
+    # default: render 'new' template
+end
+
+def show
+ # default: render 'show' template
+end
+
+def create
    @team = Team.create_team!(params[:team])
    @user = Team.create_user!(params[:team])
    if @team.save
@@ -35,18 +38,18 @@ require 'geokit-rails'
 	redirect_to users_path
   else
        teams = Team.upload(params[:file].path) 
-       @message = String.new ("Hi!!")    
+       @message = String.new   
        teams.each do |team|
 	       if !(team.errors).empty?
 		@message.concat("Sorry --#{team.team} was not added because of following erros #{team.errors.full_messages}.")
 	       end
        end
-        if @message.nil?
-        flash[:notice] = "Team data Uploaded"
-        redirect_to teams_path
+        if @message.empty?
+        flash[:notice] = "Team data Uploaded"	
+	redirect_to teams_path 
         else
         flash[:notice] = "#{@message}.Please try again"
-	redirect_to teams_path      
+        redirect_to teams_path     
         end
   end
 end

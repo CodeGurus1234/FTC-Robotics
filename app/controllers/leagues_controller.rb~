@@ -1,19 +1,14 @@
 class LeaguesController < ApplicationController
-  # GET /leagues
-  # GET /leagues.json
-  def index
-    @leagues = League.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @leagues }
-    end
-  end
+def index
+     @leagues = League.all
+end
 
-  # GET /leagues/1
-  # GET /leagues/1.json
-  def show
+def show
     @league = League.find(params[:id])
+<<<<<<< HEAD
+end
+=======
 	@teams_nos = @league[:team_no].split(',')
 #flash[:notice] = "Team Nos #{@teams_nos}"
 #redirect_to leagues_path
@@ -35,20 +30,17 @@ class LeaguesController < ApplicationController
   #     format.json { render json: @league }
    #  end
   # end
+>>>>>>> 85c5f7ef0bc7abc0501fc9d839ed9c5728516ddb
 
-  # GET /leagues/1/edit
-  def edit
+def edit
     @league = League.find(params[:id])
-  end
+end
 
-  # POST /leagues
-  # POST /leagues.json
   
 def create   
-@teams_all= Team.all
+ @teams_all= Team.all
  geo_hash= Hash.new()
  geo_hash = generate_geocoded_address(@teams_all)
-
    leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot"]
    i=-1
    # check from Leagues name already exist then do i++ TBD
@@ -86,10 +78,12 @@ def create
         end	
 	
     end #outer do ends
+<<<<<<< HEAD
+=======
 
 flash[:notice] = "Leagues--- #{@team_nos}"
+>>>>>>> 85c5f7ef0bc7abc0501fc9d839ed9c5728516ddb
 redirect_to teams_path	
-
 end
 
 def generate_geocoded_address(teams)
@@ -104,22 +98,22 @@ end
 
 
   # PUT /leagues/1
+<<<<<<< HEAD
+def update
+  @league = League.find(params[:id])
+end
+=======
   # PUT /leagues/1.json
   def update
     @league = League.find(params[:id])    
       @league.update_attributes!(:league_admin => params[:coach_name])
     redirect_to leagues_path
   end
+>>>>>>> 85c5f7ef0bc7abc0501fc9d839ed9c5728516ddb
 
   # DELETE /leagues/1
-  # DELETE /leagues/1.json
-  def destroy
+def destroy
     @league = League.find(params[:id])
     @league.destroy
-
-    respond_to do |format|
-      format.html { redirect_to leagues_url }
-      format.json { head :no_content }
     end
-  end
 end

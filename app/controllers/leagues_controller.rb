@@ -1,18 +1,10 @@
 class LeaguesController < ApplicationController
-  # GET /leagues
-  # GET /leagues.json
-  def index
-    @leagues = League.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @leagues }
-    end
-  end
+def index
+     @leagues = League.all
+end
 
-  # GET /leagues/1
-  # GET /leagues/1.json
-  def show
+def show
     @league = League.find(params[:id])
 	@teams_nos = @league[:team_no].split(',')
 #flash[:notice] = "Team Nos #{@teams_nos}"
@@ -21,34 +13,20 @@ class LeaguesController < ApplicationController
 	@teams_nos.each do |team_no|
 	   @team = Team.find_by_team(team_no)
 	   @coach_hash[@team[:team]] = @team[:main_contact]
-	end	
-    
+	end	    
   end
 
-  # GET /leagues/new
-  # GET /leagues/new.json
- # def new
-   #  @league = League.new
 
- #    respond_to do |format|
- #      format.html # new.html.erb
-  #     format.json { render json: @league }
-   #  end
-  # end
 
-  # GET /leagues/1/edit
-  def edit
+def edit
     @league = League.find(params[:id])
-  end
+end
 
-  # POST /leagues
-  # POST /leagues.json
   
 def create   
-@teams_all= Team.all
+ @teams_all= Team.all
  geo_hash= Hash.new()
  geo_hash = generate_geocoded_address(@teams_all)
-
    leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot"]
    i=-1
    # check from Leagues name already exist then do i++ TBD
@@ -86,10 +64,7 @@ def create
         end	
 	
     end #outer do ends
-
-flash[:notice] = "Leagues--- #{@team_nos}"
 redirect_to teams_path	
-
 end
 
 def generate_geocoded_address(teams)
@@ -102,8 +77,6 @@ end
 return hash
 end
 
-
-  # PUT /leagues/1
   # PUT /leagues/1.json
   def update
     @league = League.find(params[:id])    
@@ -111,15 +84,10 @@ end
     redirect_to leagues_path
   end
 
+
   # DELETE /leagues/1
-  # DELETE /leagues/1.json
-  def destroy
+def destroy
     @league = League.find(params[:id])
     @league.destroy
-
-    respond_to do |format|
-      format.html { redirect_to leagues_url }
-      format.json { head :no_content }
     end
-  end
 end
