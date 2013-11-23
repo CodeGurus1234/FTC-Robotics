@@ -14,22 +14,27 @@ class LeaguesController < ApplicationController
   # GET /leagues/1.json
   def show
     @league = League.find(params[:id])
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @league }
-    end
+	@teams_nos = @league[:team_no].split(',')
+#flash[:notice] = "Team Nos #{@teams_nos}"
+#redirect_to leagues_path
+	@coach_hash = Hash.new()
+	@teams_nos.each do |team_no|
+	   @team = Team.find_by_team(team_no)
+	   @coach_hash[@team[:team]] = @team[:main_contact]
+	end	
+    
   end
 
   # GET /leagues/new
   # GET /leagues/new.json
-  def new
-    @league = League.new
+ # def new
+   #  @league = League.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @league }
-    end
-  end
+ #    respond_to do |format|
+ #      format.html # new.html.erb
+  #     format.json { render json: @league }
+   #  end
+  # end
 
   # GET /leagues/1/edit
   def edit
@@ -48,14 +53,16 @@ def create
    i=-1
    # check from Leagues name already exist then do i++ TBD
    @teams_all.each do |team|       	
-        @league = Array.new()
+        @leagueName = String.new()
+	@league = Array.new()
+	@team_nos = String.new()
 	 if team[:league_name] == nil and team[:main_contact_postal_code] !=nil
           i+=1
          @leagueName = leagueNamesArray[i] 
 	 @league.push(team[:team])
+	 @team_nos.concat("#{team[:team]}")
 	 team.update_attributes!(:league_name => @leagueName)
-         team.save!
-         League.create_league!(team[:team],@leagueName)
+         team.save!         
 	 @centre = geo_hash[team[:team]]
 	 @teams_all.each do |teamtest|
 	   if @league.length < 16 
@@ -63,21 +70,24 @@ def create
 			      @test_if_in_radius = geo_hash[teamtest[:team]]
 			      distance = @centre.distance_to(@test_if_in_radius)
 			      if distance <50
-					@league.push(teamtest[:team])
+				        @league.push(teamtest[:team])
+					@team_nos.concat(", #{teamtest[:team]}")
 					teamtest.update_attributes!(:league_name => @leagueName)
 					teamtest.save!
-					League.create_league!(teamtest[:team],@leagueName)
+					#League.create_league!(teamtest[:team],@leagueName)
 			      end
 		     end
             else
 		break
             end            
           end #inner each ends
+	puts "#{@team_nos}"
+	League.create_league!(@team_nos,@leagueName)
         end	
-	#@leagues.push(@league)
+	
     end #outer do ends
 
-flash[:notice] = "Leagues--- #{@leagues}"
+flash[:notice] = "Leagues--- #{@team_nos}"
 redirect_to teams_path	
 
 end
@@ -96,17 +106,9 @@ end
   # PUT /leagues/1
   # PUT /leagues/1.json
   def update
-    @league = League.find(params[:id])
-
-    respond_to do |format|
-      if @league.update_attributes(params[:league])
-        format.html { redirect_to @league, notice: 'League was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @league.errors, status: :unprocessable_entity }
-      end
-    end
+    @league = League.find(params[:id])    
+      @league.update_attributes!(:league_admin => params[:coach_name])
+    redirect_to leagues_path
   end
 
   # DELETE /leagues/1

@@ -13,7 +13,7 @@
     %tr
     %td= team_no
     %td= coach_name
-    %td= radio_button_tag "coach_name", "#{coach_name}"
+    %td= radio_button_tag "#{coach_name}", "@league[:id]"
 
 = submit_tag 'Make League Admin'
 
