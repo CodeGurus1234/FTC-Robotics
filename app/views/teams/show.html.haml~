@@ -5,7 +5,7 @@
 %ul#details
   %li
     Rating:
-    = @user.role
+    
   
 
 

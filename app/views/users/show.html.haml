@@ -1,0 +1,12 @@
+-# in app/views/users/show.html.haml
+
+%h2 Hi #{params[:id]}!! Below are the details about your League
+
+= link_to 'Show Teams in this league', league_path(@league)
+
+= link_to 'Add Events for my League', new_event_path
+ 
+    
+  
+
+

@@ -2,15 +2,15 @@ class UsersController < ApplicationController
 before_filter :set_current_user
 def index
   #default page
- end
+end
+
 def create
-  @team = Team.create_team!(params[:user])
-  @user = User.create_user!(params[:user])
- if @user.save
- redirect_to login_path
+ #default page
 end
-  #default page
- end
-def create_leagues
+
+def show
+League.find_by_league_admin(params[:id])
+ #default page
 end
+
 end

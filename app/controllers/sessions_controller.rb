@@ -24,6 +24,10 @@ def create
               redirect_to team_path(@user.user_id)
              #end
            end
+           if exist.role == "League_Admin"
+              flash[:notice] = "Hi!! #{@user.user_id} You have successfully logged on to League Admin's Home Page"
+              redirect_to user_path(@user.user_id)
+           end
 	else
 	  flash[:notice] = "Login/password combination"
 	  redirect_to login_path	

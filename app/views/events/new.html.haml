@@ -1,0 +1,14 @@
+%h1 New Event
+
+= form_tag events_path do
+
+  = label :event, :eventdate, 'Event Date'
+  = date_select :event, :eventdate
+
+  = label :event, :eventdesp, 'Event Details'
+  = text_field :event, 'eventdesp'
+ 
+  = label :event, :eventlocation, 'Event Venue'
+  = text_field :event, 'eventlocation'
+
+  = submit_tag 'Add Event'
