@@ -20,9 +20,4 @@ users.each do |user|
    User.create!(user)
 end
 
-leagues =[{:league_name => 'trialbot', :team_no => '1111',:league_admin => 'abc'}]
-
-leagues.each do |league|
-   League.create!(league)
-end
 
