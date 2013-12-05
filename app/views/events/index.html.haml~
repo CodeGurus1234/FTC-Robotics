@@ -1,0 +1,19 @@
+-#  This file is app/views/events/index.html.haml
+%h1 All Events
+
+%table#events
+  %thead
+    %tr
+      %th Event Detail
+      %th Event Venue
+      %th Event Date
+      %th Teams Registered
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= event.eventdesp 
+        %td= event.eventlocation
+        %td= event.eventdate
+        %td= event.teamsregistered
+
+= link_to 'Add new Event', new_event_path

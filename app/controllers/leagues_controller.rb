@@ -1,55 +1,32 @@
 class LeaguesController < ApplicationController
-  # GET /leagues
-  # GET /leagues.json
-  def index
-    @leagues = League.all
+before_filter :set_current_user
+def index
+     @leagues = League.all
+end
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @leagues }
-    end
-  end
-
-  # GET /leagues/1
-  # GET /leagues/1.json
-  def show
+def show
     @league = League.find(params[:id])
-	@teams_nos = @league[:team_no].split(',')
-#flash[:notice] = "Team Nos #{@teams_nos}"
-#redirect_to leagues_path
-	@coach_hash = Hash.new()
-	@teams_nos.each do |team_no|
-	   @team = Team.find_by_team(team_no)
-	   @coach_hash[@team[:team]] = @team[:main_contact]
-	end	
-    
-  end
+    @teams_nos = @league[:team_no].split(',')
+    @coach_hash = Hash.new()
+    @teams_nos.each do |team_no|
+	@team = Team.find_by_team(team_no)
+	@coach_hash[@team[:team]] = @team[:main_contact]
+    end	    
+end
 
-  # GET /leagues/new
-  # GET /leagues/new.json
- # def new
-   #  @league = League.new
 
- #    respond_to do |format|
- #      format.html # new.html.erb
-  #     format.json { render json: @league }
-   #  end
-  # end
 
-  # GET /leagues/1/edit
-  def edit
+def edit
     @league = League.find(params[:id])
-  end
+end
 
-  # POST /leagues
-  # POST /leagues.json
   
 def create   
-@teams_all= Team.all
+ @teams_all= Team.all
  geo_hash= Hash.new()
  geo_hash = generate_geocoded_address(@teams_all)
-
-   leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot"]
+   leagueNamesArray = ["applebot","kiwibot","bananabot","orangebot","raspbot","cherrybot","rubybot","pumpkinbot","grapebot","lemonbot","limebot","blackbot","yellowbot","pinkbot",
+"cocobot","graybot","whitebot","redbot","greenbot","muskbot", "waterbot", "brownbot", "almondbot","cashewbot","walnutbot","rasinbot","honeybot","rainbot","snowbot","flurbot","fallbot","summerbot","winterbot","springbot"]
    i=-1
    # check from Leagues name already exist then do i++ TBD
    @teams_all.each do |team|       	
@@ -86,10 +63,7 @@ def create
         end	
 	
     end #outer do ends
-
-flash[:notice] = "Leagues--- #{@team_nos}"
 redirect_to teams_path	
-
 end
 
 def generate_geocoded_address(teams)
@@ -102,24 +76,26 @@ end
 return hash
 end
 
-
   # PUT /leagues/1
-  # PUT /leagues/1.json
-  def update
-    @league = League.find(params[:id])    
-      @league.update_attributes!(:league_admin => params[:coach_name])
-    redirect_to leagues_path
-  end
+def update
+   @league = League.find(params[:id])
+   if !params[:coach_name].nil?    
+   @league.update_attributes!(:league_admin => params[:coach_name])
+   else
+   @league.update_attributes!(params[:league])
+   end
+   @AdminInfo = Team.find_by_main_contact(params[:coach_name])
+   if !@AdminInfo.nil?
+   User.create_leagueAdmin!(@AdminInfo)
+   end
+   redirect_to leagues_path
+end
+
 
   # DELETE /leagues/1
-  # DELETE /leagues/1.json
-  def destroy
+def destroy
     @league = League.find(params[:id])
     @league.destroy
+end
 
-    respond_to do |format|
-      format.html { redirect_to leagues_url }
-      format.json { head :no_content }
-    end
-  end
 end

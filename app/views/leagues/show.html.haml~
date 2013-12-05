@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+-#  This file is app/views/leagues/index.html.haml
+%h1 #{league.league_name}
+%table
+  %tr
+    %th Team Number
+    %th Coach Name 
+    %th 
+    %th
+    %th
+  - @team_nos.each do |teamno|
+    %tr
+    %td= teamno
+    %td= league.team_no
+    %td= league.league_admin
+= link_to 'Back to Admin Page', leagues_path
+=======
 -#  This file is app/views/leagues/show.html.haml
 %h1 #{@league.league_name}
 
@@ -13,8 +30,9 @@
     %tr
     %td= team_no
     %td= coach_name
-    %td= radio_button_tag "#{coach_name}", "@league[:id]"
+    %td= radio_button_tag "coach_name", "#{coach_name}"
 
 = submit_tag 'Make League Admin'
 
 = link_to 'Back', leagues_path
+>>>>>>> 85c5f7ef0bc7abc0501fc9d839ed9c5728516ddb

@@ -2,9 +2,7 @@ class League < ActiveRecord::Base
   attr_accessible :league_admin, :league_name, :team_no
 
 def self.create_league!(teamnos,leagueName)
-#leagues.each do |team|
-League.create!({:league_name => leagueName , :team_no => teamnos})
-#League.create!({:league_name => 'trialbot', :team_no => '1111', :league_admin => 'abc'})
-#end
+  League.create!({:league_name => leagueName , :team_no => teamnos})
 end
+
 end

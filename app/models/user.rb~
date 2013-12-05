@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   # attr_accessible :title, :body
-def self.create_user!(user)
+def self.create_leagueAdmin!(leagueAdminInfo)
   session_token=SecureRandom.base64
-  User.create! ( {:user_id => user[:user_id], :email => user[:email],  :role => 'Team_Member', :password => user[:password], :session_token => 			session_token})
+  User.create! ( {:user_id => leagueAdminInfo[:main_contact], :email => leagueAdminInfo[:main_contact_email],  :role => 'Team_Admin', :password => leagueAdminInfo[:main_contact],  :session_token => session_token, :updatedProfile => 'no'})
 end
 
 end

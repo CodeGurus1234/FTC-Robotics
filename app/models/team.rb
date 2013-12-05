@@ -25,10 +25,10 @@ def self.upload(file)
         @teams.push(@team)
     end
      return @teams   
-  end
+end
 
 
-  def self.create_team!(team)
+def self.create_team!(team)
   if team[:date_registered].nil?
   dateRegistered = Time.now #).strftime('%m/%d/%Y')
   else

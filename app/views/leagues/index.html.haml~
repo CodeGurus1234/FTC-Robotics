@@ -1,4 +1,4 @@
--#  This file is app/views/leagues/index.html.haml
+-# This file is app/views/leagues/index.html.haml
 %h1 Listing leagues
 %table
   %tr
@@ -13,7 +13,7 @@
     %td= league.team_no
     %td= league.league_admin
     %td= link_to 'Show this league', league_path(league)
-    %td= link_to 'Edit', edit_league_path(league)
+    %td= link_to 'Edit League Name', edit_league_path(league)
    
 %br
 = link_to 'Back to Admin Page', users_path
