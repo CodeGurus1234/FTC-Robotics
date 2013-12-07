@@ -13,6 +13,7 @@
     %td= league.team_no
     %td= league.league_admin
     %td= link_to 'Show this league', league_path(league)
+    &nbsp
     %td= link_to 'Edit League Name', edit_league_path(league)
    
 %br

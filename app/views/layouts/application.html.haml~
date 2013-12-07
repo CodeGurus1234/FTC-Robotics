@@ -5,7 +5,7 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-    = favicon_link_tag
+    = favicon_link_tag 'favicon.ico'
     
 
   %body
@@ -17,7 +17,8 @@
         = button_to 'Sign up/Login', login_path, :method  => :get
       -else
         #notice.message You are logged in as #{@current_user.user_id}
-        = button_to 'Log out', logout_path, :method => :delete
+        #loggg
+          = button_to 'Log out', logout_path, :method => :delete
       - if flash[:notice]
         #notice.message= flash[:notice]
       - elsif flash[:warning]
