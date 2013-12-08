@@ -3,16 +3,24 @@
 %table
   %tr
     %th League name
+    %th
     %th Team Numbers
+    %th
     %th League admin
     %th
+    %th
+    %th     
     %th
   - @leagues.each do |league|
     %tr
     %td= league.league_name
+    %td= "|"
     %td= league.team_no
+    %td= "|"
     %td= league.league_admin
+    %td= "|"
     %td= link_to 'Show this league', league_path(league)
+    %td= "|"
     %td= link_to 'Edit League Name', edit_league_path(league)
    
 %br
