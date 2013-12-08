@@ -46,6 +46,7 @@ def create
 		    if teamtest[:league_name] == nil && teamtest[:main_contact_postal_code] !=nil && !@league.include?(teamtest[:team])
 			      @test_if_in_radius = geo_hash[teamtest[:team]]
 			      distance = @centre.distance_to(@test_if_in_radius)
+                              #sleep(6)
 			      if distance <50
 				        @league.push(teamtest[:team])
 					@team_nos.concat(", #{teamtest[:team]}")
@@ -71,6 +72,7 @@ hash = Hash.new()
 teams.each do |team|
 #if(team[:main_contact_postal_code] !=nil)
   hash[team[:team]] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}")
+ sleep(6)
 #end
 end
 return hash

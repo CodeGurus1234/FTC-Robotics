@@ -20,8 +20,4 @@ users.each do |user|
    User.create!(user)
 end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ab488952c725f55ea71016f3704584b1c83c20c0
 

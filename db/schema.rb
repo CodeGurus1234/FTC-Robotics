@@ -62,11 +62,11 @@ ActiveRecord::Schema.define(:version => 20131208030203) do
     t.string   "user_id"
     t.string   "email"
     t.string   "role"
-    t.string   "password"
+    t.string   "password_digest"
     t.string   "session_token"
     t.string   "updatedProfile"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
