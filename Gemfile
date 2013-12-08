@@ -13,6 +13,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
+  gem 'bcrypt-ruby', '3.0.1'
   gem 'simplecov', :require => false
 end
 group :test do
@@ -24,7 +25,7 @@ group :production do
   gem 'geocoder'
   gem 'geokit-rails'
   gem 'pg' # for post gress databses
-  gem 'smarter_csv'
+  gem 'smarter_csv'  
  end
 
 # Gems used only for assets and not required

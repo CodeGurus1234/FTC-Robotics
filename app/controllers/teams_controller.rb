@@ -4,7 +4,12 @@ before_filter :set_current_user
 require 'geokit-rails'
 
 def index
+  if @current_user.user_id != "Becca"
+  flash[:notice] ="Not accessible"
+  redirect_to users_path
+  end
   @teams= Team.all  
+  
 end
 
 def edit
