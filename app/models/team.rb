@@ -41,7 +41,7 @@ def self.create_user!(team)
 session_token=SecureRandom.base64
 team_id = team[:team].to_s
 email = team[:main_contact_email].to_s
- User.create!( {:user_id => team_id, :email => email,  :role => 'Team_Member', :password => team_id, :session_token => session_token})
+ User.create!( {:user_id => team_id, :email => email,  :role => 'Team_Member', :password_digest => team_id, :session_token => session_token})
 end
 
 end
