@@ -3,19 +3,22 @@
 
 = form_tag league_path, :method => :put
 
-%table
+%table#show
   %tr
     %th Team Numbers
     %th Coach Name
-    %th Select Admin
+    -if @current_user.user_id == "Becca"
+      %th Select Admin
 
   - @coach_hash.each_pair do |team_no, coach_name|
     %tr
     %td= team_no
     %td= coach_name
-    %td= radio_button_tag "coach_name", "#{coach_name}"
+    -if @current_user.user_id == "Becca"
+      %td= radio_button_tag "coach_name", "#{coach_name}"
 
-= submit_tag 'Make League Admin'
+-if @current_user.user_id == "Becca"
+  = submit_tag 'Make League Admin'
 
 = link_to 'Back', leagues_path
 

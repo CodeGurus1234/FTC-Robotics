@@ -1,27 +1,21 @@
 -# This file is app/views/leagues/index.html.haml
 %h1 Listing leagues
-%table
-  %tr
-    %th League name
-    %th
-    %th Team Numbers
-    %th
-    %th League admin
-    %th
-    %th
-    %th     
-    %th
-  - @leagues.each do |league|
+%table#leagues
+  %thead
     %tr
-    %td= league.league_name
-    %td= "|"
-    %td= league.team_no
-    %td= "|"
-    %td= league.league_admin
-    %td= "|"
-    %td= link_to 'Show this league', league_path(league)
-    %td= "|"
-    %td= link_to 'Edit League Name', edit_league_path(league)
+      %th League name
+      %th Team Numbers
+      %th League admin
+      %th Show
+      %th Edit
+  %tbody
+    - @leagues.each do |league|
+      %tr
+        %td= league.league_name
+        %td= league.team_no
+        %td= league.league_admin
+        %td= link_to 'Show this league', league_path(league)
+        %td= link_to 'Edit League Name', edit_league_path(league)
    
 %br
 = link_to 'Back to Admin Page', users_path
