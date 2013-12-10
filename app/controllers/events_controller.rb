@@ -17,4 +17,5 @@ def create
     flash[:notice] = "#{@event.eventdesp} was successfully created."
     redirect_to events_path
   end
+
 end
