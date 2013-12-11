@@ -5,13 +5,17 @@ def index
 end
 
 def show
+ if @current_user.nil?
+  flash[:notice] ="Please Login first"
+ else
     @league = League.find(params[:id])
     @teams_nos = @league[:team_no].split(',')
     @coach_hash = Hash.new()
     @teams_nos.each do |team_no|
 	@team = Team.find_by_team(team_no)
 	@coach_hash[@team[:team]] = @team[:main_contact]
-    end	    
+    end	
+  end    
 end
 
 
@@ -29,7 +33,9 @@ def create
 "cocobot","graybot","whitebot","redbot","greenbot","muskbot", "waterbot", "brownbot", "almondbot","cashewbot","walnutbot","rasinbot","honeybot","rainbot","snowbot","flurbot","fallbot","summerbot","winterbot","springbot"]
    i=-1
    # check from Leagues name already exist then do i++ TBD
-   @teams_all.each do |team|       	
+   @teams_all.each do |team|
+        #geo_hash[team[:team]] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}") 
+        #sleep(6)      	
         @leagueName = String.new()
 	@league = Array.new()
 	@team_nos = String.new()
@@ -45,6 +51,7 @@ def create
 	   if @league.length < 16 
 		    if teamtest[:league_name] == nil && teamtest[:main_contact_postal_code] !=nil && !@league.include?(teamtest[:team])
 			      @test_if_in_radius = geo_hash[teamtest[:team]]
+			      sleep(6) 
 			      distance = @centre.distance_to(@test_if_in_radius)
                               #sleep(6)
 			      if distance <50
@@ -70,10 +77,10 @@ end
 def generate_geocoded_address(teams)
 hash = Hash.new()
 teams.each do |team|
-#if(team[:main_contact_postal_code] !=nil)
+if(team[:main_contact_postal_code] !=nil)
   hash[team[:team]] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}")
  sleep(6)
-#end
+end
 end
 return hash
 end

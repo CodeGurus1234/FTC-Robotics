@@ -4,6 +4,7 @@ def new
     # default: render 'new' template
   end
 def index
+ check_access_user
   @events = Event.all
 end
 def create

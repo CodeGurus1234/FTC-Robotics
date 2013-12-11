@@ -1,15 +1,13 @@
 class TeamsController < ApplicationController
 before_filter :set_current_user
+ 
 
 require 'geokit-rails'
 
+
 def index
-  if @current_user.user_id != "Becca"
-  flash[:notice] ="Not accessible"
-  redirect_to users_path
-  end
-  @teams= Team.all  
-  
+ check_access_user
+  @teams= Team.all    
 end
 
 def edit
@@ -58,6 +56,10 @@ def create
         end
   end
 end
+ 
+ def export
+ send_data(Team.to_csv, :type => 'test/csv', :filename => 'teams.csv')
+ end
 
 def update
     @team = Team.find params[:team]
@@ -65,5 +67,4 @@ def update
     flash[:notice] = "Profile was successfully updated."
     redirect_to team_path(@team)
   end
-
 end
