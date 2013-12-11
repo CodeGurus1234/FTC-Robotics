@@ -20,6 +20,7 @@ end
 
 def show
  @team_no = @current_user.user_id
+ @eventsregistered = Eventregistration.find_all_by_team_no(@current_user.user_id)
 end
 
 def create

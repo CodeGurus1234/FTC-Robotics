@@ -8,3 +8,16 @@
     %br
     =link_to 'Register for an Event', event_path
 
+  %h3 Current Registered Events
+  %table#events
+  %thead
+  %tr
+    %th Event Name
+    %th Event Catagory
+   
+  %tbody
+    - @eventsregistered.each do |event|
+      %tr
+        %td= event.event_name 
+        %td= event.event_category
+	
