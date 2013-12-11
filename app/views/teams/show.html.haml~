@@ -8,6 +8,7 @@
     %br
     =link_to 'Register for an Event', event_path
 
+<<<<<<< HEAD
 %h3 Current Registered Events
 %table#events
   %thead
@@ -21,3 +22,5 @@
         %td= event_name 
         %td= event_category
 	
+=======
+>>>>>>> 4575f23da3cb3df59831cba421db901cf8be4eb6

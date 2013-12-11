@@ -17,7 +17,8 @@ users =[{:user_id => 'Becca', :email => 'becca@gmail.com', :role => 'Global_Admi
 	# {:user_id => '1234', :email => '1234@gmail.com', :role => 'Team_Member', :password => '1234', :session_token => 'session_token'}
 	]
 users.each do |user|
-   User.create!(user)
+   User.create(user)
+puts user
 end
 
 

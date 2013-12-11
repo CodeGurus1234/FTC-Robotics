@@ -1,9 +1,10 @@
-;class EventsController < ApplicationController
+class EventsController < ApplicationController
 before_filter :set_current_user
 def new 
     # default: render 'new' template
   end
 def index
+ check_access_user
   @events = Event.all
 end
 

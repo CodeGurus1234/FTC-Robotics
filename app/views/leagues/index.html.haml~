@@ -6,8 +6,8 @@
       %th League name
       %th Team Numbers
       %th League admin
-      %th     
-      %th
+      %th Show
+      %th Edit
   %tbody
     - @leagues.each do |league|
       %tr
