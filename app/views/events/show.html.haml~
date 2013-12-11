@@ -1,0 +1,24 @@
+%h1 Available Events 
+
+%table#events_registration
+  %thead
+    %tr
+      %th Event Name
+      %th Event Location
+      %th Event Catagory
+  %tbody
+    
+    - @Leagueevents.each do |event|
+      %tr
+        %td= event.eventdesp 
+        %td= event.eventlocation
+        %td= event.eventscope
+        %td= link_to 'Register', event_path(event), :method => :put
+             
+
+    - @Globalevents.each do |event|
+      %tr
+        %td= event.eventdesp 
+        %td= event.eventlocation
+        %td= event.eventscope
+        %td= button_to 'Register', event_path(event), :method => :put

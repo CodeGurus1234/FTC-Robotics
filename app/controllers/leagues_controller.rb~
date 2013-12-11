@@ -79,7 +79,7 @@ hash = Hash.new()
 teams.each do |team|
 if(team[:main_contact_postal_code] !=nil)
   hash[team[:team]] = Geokit::Geocoders::GoogleGeocoder3.geocode("#{team[:main_contact_postal_code]}")
- sleep(6)
+  sleep(6)
 end
 end
 return hash

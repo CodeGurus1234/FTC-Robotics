@@ -19,7 +19,7 @@ def new
 end
 
 def show
- # default: render 'show' template
+ @team_no = @current_user.user_id
 end
 
 def create

@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
 def set_current_user
   @current_user||=session[:session_token]&&
 			 User.find_by_session_token(session[:session_token])
-  
 end
+
 def check_access_user
  if @current_user.nil?
    flash[:notice] ="Please Login first"
