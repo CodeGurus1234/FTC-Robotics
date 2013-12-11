@@ -12,4 +12,4 @@
     %br/
     = f.text_field :league_name
   .actions
-    = f.submit
+    = f.submit, {:style => "background: #cc686e; background: -moz-linear-gradient(top, #cc686e 2%, #cc0014 28%, #cc0014 66%, #cc686e 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#cc686e), color-stop(28%,#cc0014), color-stop(66%,#cc0014), color-stop(100%,#cc686e)); background: -webkit-linear-gradient(top, #cc686e 2%,#cc0014 28%,#cc0014 66%,#cc686e 100%); background: -o-linear-gradient(top, #cc686e 2%,#cc0014 28%,#cc0014 66%,#cc686e 100%); background: -ms-linear-gradient(top, #cc686e 2%,#cc0014 28%,#cc0014 66%,#cc686e 100%); background: linear-gradient(to bottom, #cc686e 2%,#cc0014 28%,#cc0014 66%,#cc686e 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc686e', endColorstr='#cc686e',GradientType=0 ); color: white; border-radius: 25px 5px 24px 5px; -moz-border-radius: 25px 5px 24px 5px; -webkit-border-radius: 25px 5px 24px 5px; border: 2px solid #000000;"}

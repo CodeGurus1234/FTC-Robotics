@@ -4,10 +4,10 @@
 
 = form_tag import_teams_path, multipart: true do
 
-  = file_field_tag :file
+  = file_field_tag :file 
   = submit_tag 'Upload CSV'
 %br
-= button_to 'Generate Leagues', leagues_path
+= button_to 'Generate Leagues', leagues_path, {:style => "background: #e5d8ac; background: -moz-linear-gradient(top, #e5d8ac 2%, #e6b300 28%, #e6b300 66%, #e5d7a7 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#e5d8ac), color-stop(28%,#e6b300), color-stop(66%,#e6b300), color-stop(100%,#e5d7a7)); background: -webkit-linear-gradient(top, #e5d8ac 2%,#e6b300 28%,#e6b300 66%,#e5d7a7 100%); background: -o-linear-gradient(top, #e5d8ac 2%,#e6b300 28%,#e6b300 66%,#e5d7a7 100%); background: -ms-linear-gradient(top, #e5d8ac 2%,#e6b300 28%,#e6b300 66%,#e5d7a7 100%); background: linear-gradient(to bottom, #e5d8ac 2%,#e6b300 28%,#e6b300 66%,#e5d7a7 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5d8ac', endColorstr='#e5d7a7',GradientType=0 ), border-radius: 25px 5px 24px 5px; -moz-border-radius: 25px 5px 24px 5px; -webkit-border-radius: 25px 5px 24px 5px; border: 2px solid #000000; color: black;"}
 %br
 = link_to 'Show Teams', teams_path
 %br
