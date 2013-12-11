@@ -1,26 +1,25 @@
 class LeaguesController < ApplicationController
 before_filter :set_current_user
 def index
+     check_access_user_Admins
      @leagues = League.all
 end
 
 def show
- if @current_user.nil?
-  flash[:notice] ="Please Login first"
- else
+    check_access_user_Admins
     @league = League.find(params[:id])
     @teams_nos = @league[:team_no].split(',')
     @coach_hash = Hash.new()
     @teams_nos.each do |team_no|
 	@team = Team.find_by_team(team_no)
 	@coach_hash[@team[:team]] = @team[:main_contact]
-    end	
-  end    
+    end	    
 end
 
 
 
 def edit
+    check_access_user_global
     @league = League.find(params[:id])
 end
 

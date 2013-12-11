@@ -6,17 +6,8 @@ require 'geokit-rails'
 
 
 def index
-<<<<<<< HEAD
- check_access_user
+  check_access_user_global
   @teams= Team.all    
-=======
-  if @current_user.user_id != "Becca"
-  flash[:notice] ="Not accessible"
-  redirect_to users_path
-  end
-  @teams= Team.all  
-  
->>>>>>> 114cda5eb57c107089bb2fd66e1099d38f1468c7
 end
 
 def edit
@@ -28,7 +19,9 @@ def new
 end
 
 def show
+ check_access_user_Team(params[:id])
  @team_no = @current_user.user_id
+ @eventsregistered = Eventregistration.find_all_by_team_no(@current_user.user_id)
 end
 
 def create

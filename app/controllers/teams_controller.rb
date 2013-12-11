@@ -6,7 +6,7 @@ require 'geokit-rails'
 
 
 def index
- check_access_user
+  check_access_user_global
   @teams= Team.all    
 end
 
@@ -19,6 +19,7 @@ def new
 end
 
 def show
+ check_access_user_Team(params[:id])
  @team_no = @current_user.user_id
  @eventsregistered = Eventregistration.find_all_by_team_no(@current_user.user_id)
 end

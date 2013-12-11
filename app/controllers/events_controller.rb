@@ -4,20 +4,19 @@ def new
     # default: render 'new' template
   end
 def index
- check_access_user
+  check_access_user_Admins
   @events = Event.all
 end
 
 def show
+ check_access_user_Team(params[:id])
  @team = Team.find_by_team(@current_user.user_id)
  @Leagueevents = Event.find_all_by_eventscope(@team[:league_name]) 
  @Globalevents = Event.find_all_by_eventscope('Global Event')
- 
-
-
 end
 
 def create
+    #check_access_user_Admins
     @event = Event.create!(params[:event])
     @league = League.find_by_league_admin(@current_user.user_id)
     if @league
