@@ -4,7 +4,7 @@ before_filter :set_current_user
 require 'geokit-rails'
 
 def index
-  if @current_user.user_id == "Becca"
+  if @current_user.user_id != "Becca"
   flash[:notice] ="Not accessible"
   redirect_to users_path
   end
@@ -21,7 +21,7 @@ def new
 end
 
 def show
- # default: render 'show' template
+ @team_no = @current_user.team
 end
 
 def create
