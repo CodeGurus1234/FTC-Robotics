@@ -28,7 +28,7 @@ def create
               redirect_to user_path(@user.user_id)
            end
 	else
-	  flash[:notice] = "Incorrect Login/password combination"
+	  flash[:notice] = "Login/password combination is invalid"
 	  redirect_to login_path	
         end   
 end
@@ -37,6 +37,7 @@ def destroy
   session.clear
   redirect_to login_path
 end
+<<<<<<< HEAD
 
 
 def try
@@ -65,6 +66,8 @@ if exist && exist.authenticate(params[:user[:password]])
         end   
 end
 
+=======
+>>>>>>> 32b4cfe0197e6a5e00effe3d75c127abfc27600a
 end	
   
 

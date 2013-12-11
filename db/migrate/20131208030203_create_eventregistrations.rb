@@ -1,0 +1,13 @@
+class CreateEventregistrations < ActiveRecord::Migration
+  def up
+   create_table :eventregistrations do |t|
+     t.string :event_name
+     t.string :team_no
+     t.string :event_category
+   end
+  end
+
+  def down
+    drop_table :eventregistrations
+  end
+end
