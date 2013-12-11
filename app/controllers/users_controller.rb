@@ -12,6 +12,7 @@ end
 
 def show
 @league = League.find_by_league_admin(params[:id])
+@Leagueevents = Event.find_all_by_eventscope(@league[:league_name])
  #default page
 end
 
