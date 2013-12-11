@@ -10,14 +10,15 @@
 
   %body
     %h1.title FTC-Iowa Robotics
-    =image_tag "download.jpg"
+    %img{:src => "download.jpg"} 
+    %img{:src => "ftclog.jpg", :style => "text-align: right;"}
     %h2.title 
     #main
       -if !@current_user
         = button_to 'Sign up/Login', login_path, :method  => :get
       -else
-        #notice.message You are logged in as #{@current_user.user_id}
         #loggg
+          #notice.message You are logged in as #{@current_user.user_id}
           = button_to 'Log out', logout_path, :method => :delete
       - if flash[:notice]
         #notice.message= flash[:notice]
