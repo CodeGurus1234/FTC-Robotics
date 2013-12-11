@@ -28,11 +28,7 @@ def create
               redirect_to user_path(@user.user_id)
            end
 	else
-<<<<<<< HEAD
-	  flash[:notice] = "Incorrect Login/password combination"
-=======
 	  flash[:notice] = "Login/password combination is invalid"
->>>>>>> 32b4cfe0197e6a5e00effe3d75c127abfc27600a
 	  redirect_to login_path	
         end   
 end
