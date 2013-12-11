@@ -11,6 +11,9 @@ def show
  @team = Team.find_by_team(@current_user.user_id)
  @Leagueevents = Event.find_all_by_eventscope(@team[:league_name]) 
  @Globalevents = Event.find_all_by_eventscope('Global Event')
+ 
+
+
 end
 
 def create
@@ -34,7 +37,7 @@ def update
 
 	
      Eventregistration.create!(:event_name => event_name,:event_category => event_category,:team_no => team_no)
-     flash[:notice] = "#{@event_update.eventdesp} was register successfully created."
+     flash[:notice] = "#{@event_update.eventdesp} was successfully added."
     redirect_to event_path, :id=> team_no
 end
 

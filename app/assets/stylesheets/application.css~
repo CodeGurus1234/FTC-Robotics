@@ -95,6 +95,26 @@ table#leagues th, table#leagues td {
   text-align: left;
 }
 
+table {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+table th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: wheat;
+}
+table td{
+  border: 2px solid white;
+  background-color: #f2e3c9;
+}
+table th, table td {
+  padding: 4px;
+  text-align: left;
+}
+
 #notice #warning {
   background: rosybrown;
   margin: 1em 0;

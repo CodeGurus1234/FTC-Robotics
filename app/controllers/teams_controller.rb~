@@ -21,7 +21,7 @@ def new
 end
 
 def show
- @team_no = @current_user.team
+ @team_no = @current_user.user_id
 end
 
 def create
