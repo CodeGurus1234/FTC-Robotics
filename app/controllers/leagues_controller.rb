@@ -29,7 +29,8 @@ def create
 "cocobot","graybot","whitebot","redbot","greenbot","muskbot", "waterbot", "brownbot", "almondbot","cashewbot","walnutbot","rasinbot","honeybot","rainbot","snowbot","flurbot","fallbot","summerbot","winterbot","springbot"]
    i=-1
    # check from Leagues name already exist then do i++ TBD
-   @teams_all.each do |team|       	
+   @teams_all.each do |team|       
+	#@teams_all= Team.all	
         @leagueName = String.new()
 	@league = Array.new()
 	@team_nos = String.new()
@@ -41,13 +42,14 @@ def create
 	 team.update_attributes!(:league_name => @leagueName)
          team.save!         
 	 @centre = geo_hash[team[:team]]
+	 @initial_radi = 50
 	 @teams_all.each do |teamtest|
 	   if @league.length < 16 
 		    if teamtest[:league_name] == nil && teamtest[:main_contact_postal_code] !=nil && !@league.include?(teamtest[:team])
 			      @test_if_in_radius = geo_hash[teamtest[:team]]
 			      distance = @centre.distance_to(@test_if_in_radius)
                               #sleep(6)
-			      if distance <50
+			      if distance <@initial_radi
 				        @league.push(teamtest[:team])
 					@team_nos.concat(", #{teamtest[:team]}")
 					teamtest.update_attributes!(:league_name => @leagueName)
@@ -59,14 +61,88 @@ def create
 		break
             end            
           end #inner each ends
-	puts "#{@team_nos}"
+	@radius = @initial_radi
+while (true) do
+	if @league.length < 8 && @radius <= 150
+	 @hash_all= Hash.new()
+	 @radius = @radius+25
+	 @hash_all= add_teams_to_leagues(@league, @centre, @radius, @leagueName,geo_hash,@team_nos)
+	 @team_nos = @hash_all["team_num"]
+	 @league = @hash_all["league_new"]
+	 puts "#{@team_nos}...#{@league}"
+	else
+	 break
+	end
+end
+	#puts "#{@team_nos}.... #{@league}"
 	League.create_league!(@team_nos,@leagueName)
         end	
 	
-    end #outer do ends
+    end #outer do ends-
 redirect_to teams_path	
 end
 
+def add_teams_to_leagues(league,centre,radius,leagueName,geo_hash,team_nos)
+ #puts "#{league}.... #{centre}.... #{radius}......#{leagueName}.....#{team_nos}"
+hash_all = Hash.new()
+#@teams_all = Team.all
+@teams_all.each do |teamtest|
+	   if league.length < 16 
+		    if teamtest[:league_name] == nil && teamtest[:main_contact_postal_code] !=nil && !league.include?(teamtest[:team])
+			      @test_if_in_radius = geo_hash[teamtest[:team]]
+			      distance = centre.distance_to(@test_if_in_radius)
+                              #sleep(6)
+			      if distance <radius
+				        league.push(teamtest[:team])
+					team_nos.concat(", #{teamtest[:team]}")
+					#puts "#{leagueName}"
+					teamtest.update_attributes!(:league_name => leagueName)
+					teamtest.save!
+					test = Team.find_by_team(teamtest[:team])
+					#puts "#{test[:league_name]}"
+					#League.create_league!(teamtest[:team],@leagueName)
+			      end
+		     end
+            else
+		break
+            end            
+          end #inner each ends
+hash_all["team_num"] = team_nos
+hash_all["league_new"] = league
+return hash_all
+
+end
+
+
+def try
+hash_all = Hash.new()
+@teams_tab = Team.all
+@teams_tab.each do |teamtest|
+	   if league.length < 16 
+		    if teamtest[:league_name] == nil && teamtest[:main_contact_postal_code] !=nil && !league.include?(teamtest[:team])
+			      @test_if_in_radius = geo_hash[teamtest[:team]]
+			      distance = centre.distance_to(@test_if_in_radius)
+                              #sleep(6)
+			      if distance <radius
+				        league.push(teamtest[:team])
+					team_nos.concat(", #{teamtest[:team]}")
+					puts "#{leagueName}"
+					teamtest.update_attributes!(:league_name => leagueName)
+					teamtest.save!
+					test = Team.find_by_team(teamtest[:team])
+					puts "#{test[:league_name]}"
+					#League.create_league!(teamtest[:team],@leagueName)
+			      end
+		     end
+            else
+		break
+            end            
+          end #inner each ends
+hash_all["team_num"] = team_nos
+hash_all["league_new"] = league
+return hash_all
+
+end
 def generate_geocoded_address(teams)
 hash = Hash.new()
 teams.each do |team|

@@ -13,7 +13,7 @@
 #end
 
 session_token=SecureRandom.base64
-users =[{:user_id => 'Becca', :email => 'becca@gmail.com', :role => 'Global_Admin', :password_digest => 'becca', :session_token => session_token, :updatedProfile => 'yes'}
+users =[{:user_id => 'Becca', :email => 'becca@gmail.com', :role => 'Global_Admin', :password => 'becca', :session_token => session_token, :updatedProfile => 'yes'}
 	# {:user_id => '1234', :email => '1234@gmail.com', :role => 'Team_Member', :password => '1234', :session_token => 'session_token'}
 	]
 users.each do |user|
