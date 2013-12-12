@@ -1,5 +1,6 @@
 -# in app/views/users/show.html.haml
 
+
 %h2 Hi #{params[:id]}!! Below are the details about your League
 
 %h3 League Events
@@ -10,10 +11,7 @@
       %th Event Catagory
    
   %tbody
-    - @eventsregistered.each do |event|
-      %tr
-        %td= event.event_name 
-        %td= event.event_category
+    
 
 
 
