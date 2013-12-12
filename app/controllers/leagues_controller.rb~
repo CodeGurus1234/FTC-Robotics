@@ -29,8 +29,7 @@ def create
  @teams_all= Team.all
  geo_hash= Hash.new()
  geo_hash = generate_geocoded_address(@teams_all)
-   leagueNamesArray = ["Applebot","Kiwibot","Bananabot","Orangebot","Raspbot","Cherrybot","Rubybot","Pumpkinbot","Grapebot","Lemonbot","Limebot","Blackbot","Yellowbot","Pinkbot",
-"Cocobot","Graybot","Whitebot","Redbot","Greenbot","Muskbot", "Waterbot", "Brownbot", "Almondbot","Cashewbot","Walnutbot","Rasinbot","Honeybot","Rainbot","Snowbot","Flurbot","Fallbot","Summerbot","Winterbot","Springbot"]
+   leagueNamesArray = ["Applebot","Kiwibot","Bananabot","Orangebot","Raspbot","Cherrybot","Rubybot","Pumpkinbot","Grapebot","Lemonbot","Limebot","Blackbot","Yellowbot", "Pinkbot", "Cocobot","Graybot","Whitebot","Redbot","Greenbot","Muskbot", "Waterbot", "Brownbot", "Almondbot", "Cashewbot", "Walnutbot", "Rasinbot", "Honeybot", "Rainbot", "Snowbot", "Flurbot", "Fallbot", "Summerbot", "Winterbot", "Springbot"]
    i=-1
    # check from Leagues name already exist then do i++ TBD
 
@@ -51,7 +50,6 @@ def create
 	 @hash_leag = Hash.new()
 	 @hash_leag = add_teams_to_leagues(@league, @centre, @initial_radi, @leagueName,geo_hash,@team_nos)
 	 @team_nos = @hash_leag["team_num"]
-puts 
 	 @league = @hash_leag["league_new"]
 
 	@radius = @initial_radi
@@ -62,7 +60,6 @@ while (true) do
 	 @hash_all= add_teams_to_leagues(@league, @centre, @radius, @leagueName,geo_hash,@team_nos)
 	 @team_nos = @hash_all["team_num"]
 	 @league = @hash_all["league_new"]
-	 puts "#{@team_nos}...#{@league}"
 	else
 	 break
 	end
