@@ -6,7 +6,7 @@ require 'geokit-rails'
 
 
 def index
- check_access_user
+  check_access_user_global
   @teams= Team.all    
 end
 
@@ -20,6 +20,7 @@ def new
 end
 
 def show
+ check_access_user_Team(params[:id])
  @team_no = @current_user.user_id
  #@team_info = Team.find_by_team(@team_no)
  #if @team_info[:city] == nil
@@ -29,10 +30,6 @@ def show
 #end
  @eventsregistered = Eventregistration.find_all_by_team_no(@current_user.user_id)
 #end
-end
-
-def flog
-@teamnum = @current_user.user_id
 end
 
 
