@@ -50,7 +50,7 @@ def create
 	 @hash_leag = Hash.new()
 	 @hash_leag = add_teams_to_leagues(@league, @centre, @initial_radi, @leagueName,geo_hash,@team_nos)
 	 @team_nos = @hash_leag["team_num"]
-puts 
+puts "#{@team_nos}"
 	 @league = @hash_leag["league_new"]
 
 	@radius = @initial_radi

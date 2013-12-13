@@ -122,6 +122,7 @@ def update
    @league.update_attributes!(:league_admin => params[:coach_name])
    else
    @league.update_attributes!(params[:league])
+   @team = Team.find_all_by_league_name
    end
    @AdminInfo = Team.find_by_main_contact(params[:coach_name])
    if !@AdminInfo.nil?
