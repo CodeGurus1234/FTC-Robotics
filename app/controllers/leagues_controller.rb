@@ -128,6 +128,7 @@ end
 
   # DELETE /leagues/1
 def destroy
+   
     @league = League.find(params[:id])
     @league.destroy
 end

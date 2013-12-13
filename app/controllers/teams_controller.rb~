@@ -80,4 +80,14 @@ def update
     end
 
 end
+
+def destroy
+ arrteamid = params[:selected_teams].keys
+   arrteamid.each do |id|
+  Team.destroy(id)
+  end
+  flash[:notice] = "Team successfully deleted"
+  redirect_to teams_path 
+end
+
 end
