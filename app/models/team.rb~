@@ -61,7 +61,6 @@ user.save
 end
 
 def self.update_att(team)
-
     Team.update(team[:id],team[:team])
 end
 

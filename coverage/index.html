@@ -14,14 +14,14 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-12T17:19:55-08:00">2013-12-12T17:19:55-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-12T19:13:46-08:00">2013-12-12T19:13:46-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">26.13%</span></span>
+    (<span class="covered_percent"><span class="red">26.22%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>15</b> files in total.
-    <b>287</b> relevant lines. 
+    <b>286</b> relevant lines. 
     <span class="green"><b>75</b> lines covered</span> and
-    <span class="red"><b>212</b> lines missed </span>
+    <span class="red"><b>211</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -182,11 +182,11 @@
       
       <tr>
         <td class="strong"><a href="#795733b94075dfb638ed16f55c2c8a6339ba49b7" class="src_link" title="app/models/team.rb">app/models/team.rb</a></td>
-        <td class="red strong">43.59 %</td>
+        <td class="red strong">44.74 %</td>
         <td>67</td>
-        <td>39</td>
+        <td>38</td>
         <td>17</td>
-        <td>22</td>
+        <td>21</td>
         <td>0.4</td>
       </tr>
       
@@ -306,7 +306,7 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">48.21%</span></span>
+    (<span class="covered_percent"><span class="red">49.09%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -317,9 +317,9 @@
   <a name="Models"></a>
   <div>
     <b>5</b> files in total.
-    <b>56</b> relevant lines. 
+    <b>55</b> relevant lines. 
     <span class="green"><b>27</b> lines covered</span> and
-    <span class="red"><b>29</b> lines missed </span>
+    <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -367,11 +367,11 @@
       
       <tr>
         <td class="strong"><a href="#795733b94075dfb638ed16f55c2c8a6339ba49b7" class="src_link" title="app/models/team.rb">app/models/team.rb</a></td>
-        <td class="red strong">43.59 %</td>
+        <td class="red strong">44.74 %</td>
         <td>67</td>
-        <td>39</td>
+        <td>38</td>
         <td>17</td>
-        <td>22</td>
+        <td>21</td>
         <td>0.4</td>
       </tr>
       
@@ -2807,7 +2807,7 @@
         <li class="missed" data-hits="0" data-linenumber="73">
           
           
-          <code class="ruby">    if @team.to_s == &quot;true&quot;</code>
+          <code class="ruby">    if @team.save</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="74">
@@ -3309,11 +3309,11 @@
         <div class="source_table" id="795733b94075dfb638ed16f55c2c8a6339ba49b7">
   <div class="header">
     <h3>app/models/team.rb</h3>
-    <h4><span class="red">43.59 %</span> covered</h4>
+    <h4><span class="red">44.74 %</span> covered</h4>
     <div>
-      <b>39</b> relevant lines. 
+      <b>38</b> relevant lines. 
       <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>22</b> lines missed.</span>
+      <span class="red"><b>21</b> lines missed.</span>
     </div>
   </div>
   
@@ -3374,58 +3374,58 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="10">
           
-          <code class="ruby">validates :school_district, :presence =&gt; true, :on =&gt; :update</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">validates :state, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }, :on =&gt; :update</code>
+          <code class="ruby">validates :school_district, :presence =&gt; true, :on=&gt;:update</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">validates :city, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }, :on =&gt; :update</code>
+          <code class="ruby">validates :state,:presence =&gt; true, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; },:on=&gt;:update</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">validates :county, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }, :on =&gt; :update</code>
+          <code class="ruby">validates :city, :presence =&gt; true,:format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; },:on=&gt;:update</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">validates :country, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }, :on =&gt; :update</code>
+          <code class="ruby">validates :county,:presence =&gt; true, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; },:on=&gt;:update</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">validates :main_contact_city, :presence =&gt; true, :on =&gt; :update #:format =&gt; { :with =&gt; /\A.*[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
+          <code class="ruby">validates :country,:presence =&gt; true, :format =&gt; { :with =&gt; /\A[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; },:on=&gt;:update</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">validates :main_contact_postal_code, :format =&gt; { :with =&gt; /^\d{5}(-\d{4})?$/, :message =&gt; &quot;Only 5 digit numbers like XXXXX or 9 digit numbers like xxxxx-xxxx allowed&quot; }, :on =&gt; :update</code>
+          <code class="ruby">validates :main_contact_city, :presence =&gt; true,:on=&gt;:update #:format =&gt; { :with =&gt; /\A.*[a-z A-Z]+\z/, :message =&gt; &quot;Only letters allowed&quot; }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">validates :main_contact_phone, :format =&gt; { :with =&gt; /^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}/, :message =&gt; &quot;Only  digit numbers like XXXXXXXXXX or xxx-xxx-xxxx or (xxx)xxx-xxxx allowed&quot; }, :on =&gt; :update</code>
+          <code class="ruby">validates :main_contact_postal_code, :presence =&gt; true,:format =&gt; { :with =&gt; /^\d{5}(-\d{4})?$/, :message =&gt; &quot;Only 5 digit numbers like XXXXX or 9 digit numbers like xxxxx-xxxx allowed&quot; },:on=&gt;:update</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">validates :main_contact_phone, :presence =&gt; true,:format =&gt; { :with =&gt; /^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}/, :message =&gt; &quot;Only  digit numbers like XXXXXXXXXX or xxx-xxx-xxxx or (xxx)xxx-xxxx allowed&quot; },:on=&gt;:update</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
@@ -3434,244 +3434,244 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">def self.upload(file)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="23">
           
           
           <code class="ruby">    data = SmarterCSV.process(file)    </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
           <code class="ruby">    @teams = Array.new()</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="missed" data-hits="0" data-linenumber="25">
           
           
           <code class="ruby">    data.each do |team|	</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">	#team[:geocoded_address] = Geokit::Geocoders::GoogleGeocoder3.geocode(&quot;#{team[:main_contact_postal_code]}&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
           <code class="ruby">	@team = Team.create_team!(team)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
           <code class="ruby">        @teams.push(@team)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
           <code class="ruby">	create_user!(team)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="31">
           
           
           <code class="ruby">     return @teams   </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
           <code class="ruby"> def self.to_csv</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
+        <li class="missed" data-hits="0" data-linenumber="35">
           
           
           <code class="ruby">    CSV.generate do |csv|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="missed" data-hits="0" data-linenumber="36">
           
           
           <code class="ruby">      csv &lt;&lt; column_names</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="missed" data-hits="0" data-linenumber="37">
           
           
           <code class="ruby">      all.each do |team|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="36">
+        <li class="missed" data-hits="0" data-linenumber="38">
           
           
           <code class="ruby">        csv &lt;&lt; team.attributes.values_at(*column_names)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">def self.create_team!(team)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
+        <li class="missed" data-hits="0" data-linenumber="45">
           
           
           <code class="ruby">  if team[:date_registered].nil?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="44">
+        <li class="missed" data-hits="0" data-linenumber="46">
           
           
           <code class="ruby">  dateRegistered = Time.now #).strftime('%m/%d/%Y')</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">  else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
+        <li class="missed" data-hits="0" data-linenumber="48">
           
           
           <code class="ruby">  dateRegistered = DateTime.strptime(team[:date_registered], &quot;%m/%d/%Y&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">  end	</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="48">
+        <li class="missed" data-hits="0" data-linenumber="50">
           
           
           <code class="ruby">Team.create({:team =&gt; team[:team], :date_registered=&gt;dateRegistered, :main_contact=&gt;team[:main_contact], :main_contact_email=&gt;team[:main_contact_email],:organization =&gt; team[:organization], :city=&gt;team[:city], :state=&gt;team[:state], :date_registered=&gt;dateRegistered, :organization =&gt; team[:organization], :city=&gt;team[:city], :state=&gt;team[:state], :main_contact_phone=&gt;team[:&quot;main_contact_phone/ext.&quot;], :county=&gt;team[:county], :organization_type=&gt;team[:organization_type],:school_district=&gt;team[:school_district]})</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">def self.create_user!(team)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="53">
+        <li class="missed" data-hits="0" data-linenumber="55">
           
           
           <code class="ruby">session_token=SecureRandom.base64</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="54">
+        <li class="missed" data-hits="0" data-linenumber="56">
           
           
           <code class="ruby">team_id = team[:team].to_s</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
+        <li class="missed" data-hits="0" data-linenumber="57">
           
           
           <code class="ruby">email = team[:main_contact_email].to_s</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="missed" data-hits="0" data-linenumber="58">
           
           
           <code class="ruby"> user = User.create!( {:user_id =&gt; team_id, :email =&gt; email, :role =&gt; 'Team_Member', :password =&gt; team_id, :session_token =&gt; session_token})</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
           <code class="ruby">user.save</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
@@ -3680,28 +3680,28 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
           <code class="ruby">def self.update_att(team)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
+        <li class="missed" data-hits="0" data-linenumber="64">
           
           
-          <code class="ruby">   @getteam = Team.find_by_id(team[:id])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="63">
-          
-          
-          <code class="ruby">    @getteam.update(team[:team])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="64">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">    Team.update(team[:id],team[:team])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
