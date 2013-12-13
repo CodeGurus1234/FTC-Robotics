@@ -60,13 +60,8 @@ user.save
 end
 
 def self.update_att(team)
-   #@getteam = Team.find_by_id(team[:id])
     Team.update(team[:id],team[:team])
 end
 
-def sample
-#:organization => team[:organization], :city=>team[:city], :state=>team[:state], :date_registered=>dateRegistered, :organization => team[:organization], :city=>team[:city], :state=>team[:state], :main_contact_phone=>team[:"main_contact_phone/ext."], :county=>team[:county], :organization_type=>team[:organization_type],:school_district=>team[:school_district]
-
-end
 
 end
