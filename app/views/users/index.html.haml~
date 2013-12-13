@@ -13,5 +13,8 @@
 %br
 = link_to 'Show Leagues', leagues_path
 %br
+%br
+= link_to 'Show All Events', events_path
+%br
 = link_to 'Add Global Events', new_event_path
 

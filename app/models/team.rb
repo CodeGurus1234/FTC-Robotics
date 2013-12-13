@@ -7,14 +7,16 @@ validates :team, :presence => true, :uniqueness => true, :format => { :with => /
 validates :main_contact, :format => { :with => /\A.*[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=> :create
 validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message => "Only valid email address formats allowed" },:on=> :create
 
-validates :school_district, :presence => true, :on => :update
-validates :state, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }, :on => :update
-validates :city, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }, :on => :update
-validates :county, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }, :on => :update
-validates :country, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" }, :on => :update
-validates :main_contact_city, :presence => true, :on => :update #:format => { :with => /\A.*[a-z A-Z]+\z/, :message => "Only letters allowed" }
-validates :main_contact_postal_code, :format => { :with => /^\d{5}(-\d{4})?$/, :message => "Only 5 digit numbers like XXXXX or 9 digit numbers like xxxxx-xxxx allowed" }, :on => :update
-validates :main_contact_phone, :format => { :with => /^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}/, :message => "Only  digit numbers like XXXXXXXXXX or xxx-xxx-xxxx or (xxx)xxx-xxxx allowed" }, :on => :update
+
+validates :school_district, :presence => true, :on=>:update
+validates :state,:presence => true, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:update
+validates :city, :presence => true,:format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:update
+validates :county,:presence => true, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:update
+validates :country,:presence => true, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:update
+validates :main_contact_city, :presence => true,:on=>:update #:format => { :with => /\A.*[a-z A-Z]+\z/, :message => "Only letters allowed" }
+validates :main_contact_postal_code, :presence => true,:format => { :with => /^\d{5}(-\d{4})?$/, :message => "Only 5 digit numbers like XXXXX or 9 digit numbers like xxxxx-xxxx allowed" },:on=>:update
+validates :main_contact_phone, :presence => true,:format => { :with => /^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}/, :message => "Only  digit numbers like XXXXXXXXXX or xxx-xxx-xxxx or (xxx)xxx-xxxx allowed" },:on=>:update
+
 
 
 def self.upload(file)
@@ -59,9 +61,8 @@ user.save
 end
 
 def self.update_att(team)
-   @getteam = Team.find_by_id(team[:id])
-    @getteam.update(team[:team])
 
+    Team.update(team[:id],team[:team])
 end
 
 end
