@@ -76,7 +76,7 @@ def update
     @team =Team.update_att(params)
     #@team = Team.find_by_team(@current_user.user_id)
     #@team.update_attributes!(params[:team])
-    if @team.to_s == "true"
+    if @team.save
       flash[:notice] = "Profile was successfully updated. "
       redirect_to team_path(@current_user.user_id)
    else

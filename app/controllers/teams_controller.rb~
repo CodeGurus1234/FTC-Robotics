@@ -32,10 +32,6 @@ def show
 #end
 end
 
-def flog
-@teamnum = @current_user.user_id
-end
-
 
 def create
    @team = Team.create_team!(params[:team])
