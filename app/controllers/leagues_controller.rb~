@@ -50,7 +50,7 @@ def create
 	 @league = @hash_leag["league_new"]
 
 	@radius = @initial_radi
-while (true) do
+        while (true) do
 	if @league.length < 8 && @radius <= 150
 	 @hash_all= Hash.new()
 	 @radius = @radius+25
@@ -122,6 +122,9 @@ def update
    redirect_to leagues_path
 end
 
+def export
+ send_data(League.to_csv, :type => 'test/csv', :filename => 'leagues.csv')
+end
 
   # DELETE /leagues/1
 def destroy

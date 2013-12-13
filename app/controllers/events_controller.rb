@@ -33,13 +33,14 @@ def update
      @event_update = Event.find_by_id(params[:id])
      event_name = @event_update.eventdesp
      event_category =@event_update.eventscope
-     team_no = @current_user.user_id
-
-	
+     team_no = @current_user.user_id	
      Eventregistration.create!(:event_name => event_name,:event_category => event_category,:team_no => team_no)
      flash[:notice] = "#{@event_update.eventdesp} was successfully added."
-    redirect_to event_path, :id=> team_no
+    redirect_to event_path(@current_user.user_id)
 end
 
+def export
+ send_data(Eventregistration.to_csv, :type => 'test/csv', :filename => 'EventsRegistered.csv')
+end
 
 end

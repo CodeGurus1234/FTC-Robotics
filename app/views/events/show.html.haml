@@ -22,3 +22,5 @@
         %td= event.eventlocation
         %td= event.eventscope
         %td= link_to 'Register', event_path(event), :method => :put
+
+=link_to 'Back to home',:action=>"show", :controller=>"teams", :id=>"#{@current_user.user_id}"
