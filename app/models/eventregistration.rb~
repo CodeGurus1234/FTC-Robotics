@@ -1,2 +1,12 @@
-class EventRegistration < ActiveRecord::Base
+class Eventregistration < ActiveRecord::Base
+
+ def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |eventregistered|
+        csv << eventregistered.attributes.values_at(*column_names).group_by(*column_name(3))
+      end
+     
+    end
+  end
 end

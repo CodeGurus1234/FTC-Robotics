@@ -16,4 +16,10 @@
         %td= event.eventdate.strftime('%m/%d/%Y')
         %td= event.eventscope
 
+= button_to 'Export as CSV', export_events_path
+%br
+%br
 = link_to 'Add new Event', new_event_path
+%br
+%br
+=link_to 'Back to home', users_path

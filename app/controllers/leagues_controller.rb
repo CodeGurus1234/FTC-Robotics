@@ -122,6 +122,9 @@ def update
    redirect_to leagues_path
 end
 
+def export
+ send_data(League.to_csv, :type => 'test/csv', :filename => 'leagues.csv')
+end
 
   # DELETE /leagues/1
 def destroy

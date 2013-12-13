@@ -17,5 +17,7 @@
         %td= link_to 'Show this league', league_path(league)
         %td= link_to 'Edit League Name', edit_league_path(league)
    
-%br
+
 = link_to 'Back to Admin Page', users_path
+%br
+= button_to 'Export as CSV', export_leagues_path

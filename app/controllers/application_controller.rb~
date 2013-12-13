@@ -42,7 +42,7 @@ def check_access_user_Team(team)
 	  if @current_user.role != "Team_Member"
 	  	flash[:notice] ="Sorry!! Only teams are allowed to view their page"
 	     if @current_user.role == "League_Admin"
-	  	redirect_to user_path :id => @current_user.user_id
+	  	redirect_to user_path(@current_user.user_id)
 	     end
 	     if @current_user.user_id == "Becca"
 	  	redirect_to users_path
@@ -50,7 +50,7 @@ def check_access_user_Team(team)
            else 
              if @current_user.user_id != team
               flash[:notice] ="Sorry!! You are not allowed to see other teams page!!"
-              redirect_to team_path :id => @current_user.user_id
+              redirect_to team_path(@current_user.user_id)
             end
            end
   end
