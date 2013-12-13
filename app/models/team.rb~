@@ -61,15 +61,8 @@ user.save
 end
 
 def self.update_att(team)
-<<<<<<< HEAD
-   @getteam = Team.find_by_id(team[:id])
-    @getteam.update(team[:team])
 
-end
-=======
     Team.update(team[:id],team[:team])
 end
-
->>>>>>> cd43fb9e1b9cfa571812bb3b5351b176676ebd17
 
 end

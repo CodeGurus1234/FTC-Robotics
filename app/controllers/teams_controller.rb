@@ -30,7 +30,7 @@ def create
    @team = Team.create_team!(params[:team])
    @user = Team.create_user!(params[:team])
    puts @team
-   if @team.save
+   if @team
 	flash[:notice] = "Welcome #{@team.team}. Your account has been created"	
 	redirect_to login_path	
   
