@@ -25,7 +25,8 @@ group :production do
   gem 'geocoder'
   gem 'geokit-rails'
   gem 'pg' # for post gress database
-  gem 'smarter_csv'  
+  gem 'smarter_csv' 
+  gem 'bcrypt-ruby', '3.0.1' 
  end
 
 # Gems used only for assets and not required
