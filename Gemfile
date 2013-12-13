@@ -24,7 +24,7 @@ end
 group :production do
   gem 'geocoder'
   gem 'geokit-rails'
-  gem 'pg' # for post gress databses
+  gem 'pg' # for post gress database
   gem 'smarter_csv'  
  end
 
