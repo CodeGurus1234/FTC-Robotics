@@ -28,13 +28,10 @@ def create
  @teams_all= Team.all
  geo_hash= Hash.new()
  geo_hash = generate_geocoded_address(@teams_all)
-   leagueNamesArray = ["Applebot","Kiwibot","Bananabot","Orangebot","Raspbot","Cherrybot","Rubybot","Pumpkinbot","Grapebot","Lemonbot","Limebot","Blackbot","Yellowbot","Pinkbot",
-"Cocobot","Graybot","Whitebot","Redbot","Greenbot","Muskbot", "Waterbot", "Brownbot", "Almondbot","Cashewbot","Walnutbot","Rasinbot","Honeybot","Rainbot","Snowbot","Flurbot","Fallbot","Summerbot","Winterbot","Springbot"]
+   leagueNamesArray = ["Applebot","Kiwibot","Bananabot","Orangebot","Raspbot","Cherrybot","Rubybot","Pumpkinbot","Grapebot","Lemonbot","Limebot","Blackbot","Yellowbot", "Pinkbot", "Cocobot","Graybot","Whitebot","Redbot","Greenbot","Muskbot", "Waterbot", "Brownbot", "Almondbot", "Cashewbot", "Walnutbot", "Rasinbot", "Honeybot", "Rainbot", "Snowbot", "Flurbot", "Fallbot", "Summerbot", "Winterbot", "Springbot"]
    i=-1
-   # check from Leagues name already exist then do i++ TBD
 
-   @teams_all.each do |team|       
-	#@teams_all= Team.all	
+   @teams_all.each do |team|	
         @leagueName = String.new()
 	@league = Array.new()
 	@team_nos = String.new()
@@ -50,23 +47,20 @@ def create
 	 @hash_leag = Hash.new()
 	 @hash_leag = add_teams_to_leagues(@league, @centre, @initial_radi, @leagueName,geo_hash,@team_nos)
 	 @team_nos = @hash_leag["team_num"]
-puts "#{@team_nos}"
 	 @league = @hash_leag["league_new"]
 
 	@radius = @initial_radi
-while (true) do
+        while (true) do
 	if @league.length < 8 && @radius <= 150
 	 @hash_all= Hash.new()
 	 @radius = @radius+25
 	 @hash_all= add_teams_to_leagues(@league, @centre, @radius, @leagueName,geo_hash,@team_nos)
 	 @team_nos = @hash_all["team_num"]
 	 @league = @hash_all["league_new"]
-	 puts "#{@team_nos}...#{@league}"
 	else
 	 break
 	end
 end
-	#puts "#{@team_nos}.... #{@league}"
 	League.create_league!(@team_nos,@leagueName)
         end	
 	
@@ -85,12 +79,9 @@ def add_teams_to_leagues(league,centre,radius,leagueName,geo_hash,team_nos)
 			      if distance < radius
 				        league.push(teamtest[:team])
 					team_nos.concat(", #{teamtest[:team]}")
-					#puts "#{leagueName}"
 					teamtest.update_attributes!(:league_name => leagueName)
 					teamtest.save!
 					test = Team.find_by_team(teamtest[:team])
-					#puts "#{test[:league_name]}"
-					#League.create_league!(teamtest[:team],@leagueName)
 			      end
 		     end
             else

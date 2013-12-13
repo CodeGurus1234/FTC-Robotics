@@ -4,11 +4,11 @@
 
 = form_tag team_path(@team), :method => :put do
 
- = label :team, :organization, 'School/Organization'
- = text_field :team, 'organization'
-
  = label :team, :school_district, 'School District'
  = text_field :team, 'school_district'
+
+ = label :team, :organization, 'Organization'
+ = text_field :team, 'organization'
 
  = label :team, :city, 'City'
  = text_field :team, 'city'
@@ -22,29 +22,22 @@
  = label :team, :country, 'Country'
  = text_field :team, 'country'
 
- = label :team, :zip, 'Zip Code'
- = text_field :team, 'zip'
-
- = label :team, :coach_first, 'Coach Name'
- = text_field :team, 'main_contact'
-
- = label :team, :coach_last, 'Coach address'
+ = label :team, :main_contact_address, 'Coach address'
  = text_field :team, 'main_contact_address'
 
- = label :team, :coach_mail, 'Coach city'
+ = label :team, :main_contact_city, 'Coach city'
  = text_field :team, 'main_contact_city'
 
- = label :team, :"main_contact_state/main_contact_prov", 'Coach state'
- = text_field :team, "main_contact_state/main_contact_prov"
+ = label :team, :main_contact_state, 'Coach state'
+ = text_field :team, 'main_contact_state'
 
  = label :team, :main_contact_postal_code, 'Coach zipcode'
  = text_field :team, 'main_contact_postal_code'
 
- = label :team, :"main_contact_phone/ext.", 'Coach Phone'
- = text_field :team, "main_contact_phone/ext."
- 
- = label :team, :school_district, 'School District'
- = text_field :team, 'school_district'
+ = label :team, :main_contact_phone, 'Coach Phone'
+ = text_field :team, 'main_contact_phone'
+
+ = label :team, :Organization_type, 'Organization Type'
 
  = label :team, :organization_type, 'Public School'
  = radio_button :team, 'organization_type', 'Public School'
@@ -54,8 +47,11 @@
 
  = label :team, :organization_type, 'Scout Troop'
  = radio_button :team, 'organization_type', 'Scout Troop'
+
+ = label :team, :organizatoin_type, 'For Each'
+ = radio_button :team, 'organization_type', 'For Each'
  
  = label :team, :organization_type, 'Other'
  = radio_button :team, 'organization_type', 'Other'
 
- = submit_tag 'Update Profile'
+ = submit_tag 'Update my data'

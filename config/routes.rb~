@@ -16,11 +16,15 @@ FTCLeagues::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 resources :users
+match 'teams/flog', to: 'teams#flog', via: :post
 resources :teams do
     collection { post :import }
     collection { post :export }
+#post 'teams/first_login'
+    #collection { post :first_login }
   end
-  post 'teams/create_leagues'
+ # post 'teams/create_leagues'
+  #post 'teams/first_login'
   root to: 'teams#index'
   match '/login', to: 'sessions#new', via: :get
   match '/login_create', to: 'sessions#create', via: :post

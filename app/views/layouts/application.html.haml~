@@ -11,7 +11,11 @@
   %body
     %h1.title FTC-Iowa Robotics
     =image_tag "download.jpg"
+<<<<<<< HEAD
     
+=======
+    =image_tag("ftclog.jpg", :align=> "right")
+>>>>>>> d2bf84ccd6c02f82aba293a5165358af2c39712c
     %h2.title 
     #main
       -if !@current_user

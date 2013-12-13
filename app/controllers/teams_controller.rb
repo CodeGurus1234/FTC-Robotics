@@ -11,7 +11,8 @@ def index
 end
 
 def edit
- # default: render 'edit' template
+@team = Team.find_by_team(@current_user.user_id)
+ # default: render 'edit' templat
 end
 
 def new
@@ -21,8 +22,16 @@ end
 def show
  check_access_user_Team(params[:id])
  @team_no = @current_user.user_id
+ #@team_info = Team.find_by_team(@team_no)
+ #if @team_info[:city] == nil
+  #flash[:notice] = "Please fill up all the details before continuing. #{@team_info[:city]}"
+ # redirect_to teams_first_login_path
+ #else 
+#end
  @eventsregistered = Eventregistration.find_all_by_team_no(@current_user.user_id)
+#end
 end
+
 
 def create
    @team = Team.create_team!(params[:team])
@@ -64,9 +73,17 @@ end
  end
 
 def update
-    @team = Team.find params[:team]
-    @team.update_attributes!(params[:team])
-    flash[:notice] = "Profile was successfully updated."
-    redirect_to team_path(@team)
-  end
+    @team =Team.update_att(params)
+    #@team = Team.find_by_team(@current_user.user_id)
+    #@team.update_attributes!(params[:team])
+    if @team.to_s == "true"
+      flash[:notice] = "Profile was successfully updated. "
+      redirect_to team_path(@current_user.user_id)
+   else
+	flash[:notice] = " Sorry -- #{@team.errors.full_messages}.Try again"
+	redirect_to edit_team_path(@current_user.user_id)
+
+    end
+
+end
 end
