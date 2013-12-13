@@ -8,7 +8,7 @@ describe ApplicationController do
 describe "check_access_user_global" do
    it "checks global access" do
   if @current_user.nil?
-   response.status.should be(200)
+   expect(response).to redirect_to(login_path)
    flash[:notice].should == "Please Login first"
    else 
    if @current_user.user_id != "Becca"
