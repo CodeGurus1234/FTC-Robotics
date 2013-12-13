@@ -50,7 +50,7 @@ def create
 	 @league = @hash_leag["league_new"]
 
 	@radius = @initial_radi
-while (true) do
+        while (true) do
 	if @league.length < 8 && @radius <= 150
 	 @hash_all= Hash.new()
 	 @radius = @radius+25
@@ -113,6 +113,7 @@ def update
    @league.update_attributes!(:league_admin => params[:coach_name])
    else
    @league.update_attributes!(params[:league])
+   @team = Team.find_all_by_league_name
    end
    @AdminInfo = Team.find_by_main_contact(params[:coach_name])
    if !@AdminInfo.nil?
