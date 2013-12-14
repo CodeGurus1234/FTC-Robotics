@@ -48,7 +48,7 @@ def self.create_team!(team)
   else
   dateRegistered = DateTime.strptime(team[:date_registered], "%m/%d/%Y")
   end	
-Team.create({:team => team[:team], :date_registered=>dateRegistered, :main_contact=>team[:main_contact], :main_contact_address=> team[:main_contact_address],:main_contact_city=> team[:main_contact_city],:main_contact_state=> team[:main_contact_state], :main_contact_postal_code=> team[:main_contact_postal_code], :main_contact_email=>team[:main_contact_email],:country=> team[:country],:organization => team[:organization], :city=>team[:city], :state=>team[:state],  :main_contact_phone=>team[:"main_contact_phone"], :county=>team[:county], :organization_type=>team[:organization_type],:school_district=>team[:school_district]})
+ Team.create({:team => team[:team], :date_registered=>dateRegistered, :main_contact=>team[:main_contact], :main_contact_address=> team[:main_contact_address],:main_contact_city=> team[:main_contact_city],:main_contact_state=> team[:main_contact_state], :main_contact_postal_code=> team[:main_contact_postal_code], :main_contact_email=>team[:main_contact_email],:country=> team[:country],:organization => team[:organization], :city=>team[:city], :state=>team[:state],  :main_contact_phone=>team[:"main_contact_phone"], :county=>team[:county], :organization_type=>team[:organization_type],:school_district=>team[:school_district]})
 end
 
 
