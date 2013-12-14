@@ -2,7 +2,7 @@
 %h1 All Teams
 
 = link_to 'Go Back to Admin Page', users_path
-= form_tag :action => "remove" do
+
   %table#teams
     %thead
       %tr
@@ -44,11 +44,13 @@
           %td= team.organization_type
           %td= team.school_district
           %td= team.league_name
-          %td= check_box_tag "selected_teams[#{team[:id]}]"
+        -if team.league_name.nil?
+  = form_tag :action => "remove" do
+    %td= check_box_tag "selected_teams[#{team[:id]}]"
 
   = submit_tag 'Delete Selected Teams'        
-
+%br
 = link_to 'Go Back to Admin Page', users_path
-
+%br
 = button_to 'Export as CSV', export_teams_path
 

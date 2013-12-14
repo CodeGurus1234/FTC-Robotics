@@ -81,13 +81,18 @@ def update
 
 end
 
-def destroy
+def remove
+if params[:selected_teams].nil?
+flash[:notice] = "Sorry !! Teams can't be deleted after leagues are generated"
+  redirect_to teams_path
+else
  arrteamid = params[:selected_teams].keys
    arrteamid.each do |id|
   Team.destroy(id)
   end
   flash[:notice] = "Team successfully deleted"
   redirect_to teams_path 
+end
 end
 
 end
