@@ -29,13 +29,13 @@
  = text_field :team, 'main_contact_city'
 
  = label :team, :main_contact_state, 'Coach state'
- = text_field :team, 'main_contact_state/prov'
+ = text_field :team, 'main_contact_state'
 
  = label :team, :main_contact_postal_code, 'Coach zipcode'
  = text_field :team, 'main_contact_postal_code'
 
  = label :team, :main_contact_phone, 'Coach Phone'
- = text_field :team, 'main_contact_phone/ext'
+ = text_field :team, 'main_contact_phone'
 
  = label :team, :Organization_type, 'Organization Type'
 
