@@ -2,25 +2,26 @@
 
 %h2 Hi #{params[:id]}!! Below are the details about your League
 
-%h3 League Events
-%table#events
+%h3 Team Registered
+%table#eventregistrations
   %thead
     %tr
       %th Event Name
-      %th Event Catagory
+      %th Team No.
    
   %tbody
-    
-
-
-
-
-
+    - @eventsregistered.each do |reg_event|
+      %tr
+        %td= reg_event.event_name
+        %td= reg_event.team_no
+       
 = link_to 'Show Teams in this league', league_path(@league)
-
+%br
+%br
 = link_to 'Add Events for my League', new_event_path
- 
-    
+%br
+%br
+= link_to 'Show all Events', events_path
   
 
 

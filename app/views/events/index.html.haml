@@ -22,4 +22,8 @@
 = link_to 'Add new Event', new_event_path
 %br
 %br
-=link_to 'Back to home', users_path
+-if @current_user.user_id == "Becca"
+  = link_to 'Back', users_path
+-else
+  = link_to 'Back',:action=>"show", :controller=>"users", :id=>"#{@current_user.user_id}"
+

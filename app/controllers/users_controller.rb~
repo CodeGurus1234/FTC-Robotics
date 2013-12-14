@@ -11,10 +11,8 @@ def create
 end
 
 def show
-
  check_access_user_Admins
  @league = League.find_by_league_admin(params[:id])
-
  #default page
 end
 
