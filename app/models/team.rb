@@ -9,6 +9,7 @@ validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-
 
 
 validates :school_district, :presence => true, :on=>:update
+validates :organization_type, :presence => true, :on=>:update
 validates :state,:presence => true, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:update
 validates :city, :presence => true,:format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:update
 validates :county,:presence => true, :format => { :with => /\A[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:update

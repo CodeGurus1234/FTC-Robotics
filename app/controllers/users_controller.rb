@@ -13,6 +13,9 @@ end
 def show
  check_access_user_Admins
  @league = League.find_by_league_admin(params[:id])
+ @eventsregistered = Eventregistration.find_all_by_event_category(@league.league_name)
+
+ @league = League.find_by_league_admin(params[:id])
  #default page
 end
 
