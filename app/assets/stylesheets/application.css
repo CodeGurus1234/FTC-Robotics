@@ -143,12 +143,6 @@ form label {
   color: #CC0014;
 }
 
-th:nth-of-type(2n) {
-  background-color: salmon;
-}
-th:nth-of-type(2n+1) {
-  background-color: lightblue;
-}
 input[type=submit]{
   background: #7db9e8; /* Old browsers */
   background: -moz-linear-gradient(top, #7db9e8 2%, #002e99 13%, #002e99 82%, #2989d8 99%); /* FF3.6+ */

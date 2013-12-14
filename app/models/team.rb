@@ -3,9 +3,9 @@ class Team < ActiveRecord::Base
 #require 'smarter_csv' 
 #require 'geokit'
 
-validates :team, :presence => true, :uniqueness => true, :format => { :with => /^\d{4}$/, :message => "Only 4 digit numbers allowed"}, :on=> :create
-validates :main_contact, :format => { :with => /\A.*[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=> :create
-validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message => "Only valid email address formats allowed" },:on=> :create
+validates :team, :presence => true, :uniqueness => true, :format => { :with => /^\d{4}$/, :message => "Only 4 digit numbers allowed"}, :on=>:create
+validates :main_contact, :format => { :with => /\A.*[a-z A-Z]+\z/, :message => "Only letters allowed" },:on=>:create
+validates :main_contact_email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message => "Only valid email address formats allowed" },:on=>:create
 
 
 validates :school_district, :presence => true, :on=>:update

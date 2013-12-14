@@ -125,9 +125,6 @@ table th, table td {
   text-align: left;
 }
 
-table "odd"{
-  background-color: white;
-}
 
 a:link {color: #CC0014;}
 a:visited {color: #CC0014;}
