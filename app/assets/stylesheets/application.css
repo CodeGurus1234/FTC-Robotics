@@ -125,6 +125,12 @@ table th, table td {
   text-align: left;
 }
 
+
+a:link {color: #CC0014;}
+a:visited {color: #CC0014;}
+a:hover {background-color: #CC0014;}
+a:active {background-color: #CC0014;}
+
 #notice #warning {
   background: rosybrown;
   margin: 1em 0;
@@ -137,6 +143,12 @@ form label {
   color: #CC0014;
 }
 
+th:nth-of-type(2n) {
+  background-color: salmon;
+}
+th:nth-of-type(2n+1) {
+  background-color: lightblue;
+}
 input[type=submit]{
   background: #7db9e8; /* Old browsers */
   background: -moz-linear-gradient(top, #7db9e8 2%, #002e99 13%, #002e99 82%, #2989d8 99%); /* FF3.6+ */
