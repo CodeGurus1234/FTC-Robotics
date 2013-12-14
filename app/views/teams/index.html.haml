@@ -44,11 +44,12 @@
           %td= team.organization_type
           %td= team.school_district
           %td= team.league_name
+        -if team.league_name.nil?
           %td= check_box_tag "selected_teams[#{team[:id]}]"
 
   = submit_tag 'Delete Selected Teams'        
-
+%br
 = link_to 'Go Back to Admin Page', users_path
-
+%br
 = button_to 'Export as CSV', export_teams_path
 

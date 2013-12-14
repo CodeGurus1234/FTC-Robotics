@@ -35,7 +35,7 @@ def update
      event_category =@event_update.eventscope
      team_no = @current_user.user_id	
      Eventregistration.create!(:event_name => event_name,:event_category => event_category,:team_no => team_no)
-     flash[:notice] = "#{@event_update.eventdesp} was successfully added."
+     flash[:notice] = "#{@event_update.eventdesp} was successfully registered."
     redirect_to event_path(@current_user.user_id)
 end
 
