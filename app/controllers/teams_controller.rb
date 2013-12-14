@@ -28,10 +28,11 @@ end
 
 def create
    @team = Team.create_team!(params[:team])
-   @user = Team.create_user!(params[:team])
-   puts @team
-   if @team
-	flash[:notice] = "Welcome #{@team.team}. Your account has been created"	
+   exist = @team[:id]
+   puts exist
+   if exist
+        @user = Team.create_user!(params[:team])
+	flash[:notice] = "Welcome #{@team.team}. Your account has been created, Please use your team no as password to login"	
 	redirect_to login_path	
   
    else

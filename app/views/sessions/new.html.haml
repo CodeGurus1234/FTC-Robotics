@@ -10,6 +10,7 @@
 
   = submit_tag 'Login to my account'
 %br
+-if @current_user.nil?
   = link_to 'Sign-­up as a new team', new_team_path
 
 
