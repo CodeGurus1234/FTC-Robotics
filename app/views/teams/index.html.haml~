@@ -2,7 +2,7 @@
 %h1 All Teams
 
 = link_to 'Go Back to Admin Page', users_path
-= form_tag :action => "remove" do
+
   %table#teams
     %thead
       %tr
@@ -45,7 +45,8 @@
           %td= team.school_district
           %td= team.league_name
         -if team.league_name.nil?
-          %td= check_box_tag "selected_teams[#{team[:id]}]"
+  = form_tag :action => "remove" do
+    %td= check_box_tag "selected_teams[#{team[:id]}]"
 
   = submit_tag 'Delete Selected Teams'        
 %br

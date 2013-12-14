@@ -2,7 +2,7 @@
 
 %h2 Hi #{params[:id]}!! Below are the details about your League
 
-%h3 League Events
+%h3 Teams Registered for League events
 %table#eventregistrations
   %thead
     %tr
